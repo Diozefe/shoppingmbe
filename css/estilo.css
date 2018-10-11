@@ -1,0 +1,40 @@
+@charset "ISO-8859-1";
+body{
+	background-image:url("../img/fundoteste.png");
+	margin: 0px;
+}
+#divsuperior{
+	background: #8effe4
+}
+.btnSuperior{
+	padding: 13px 11px;
+	float: left;
+	width: auto;
+	border: none;
+	display: block;
+	outline: 0;
+}
+.btnSupEspaco{
+	white-space: normal;
+}
+div.supbarsombra{
+    box-shadow: 0 4px 8px 0 rgba(95, 216, 211, 0.68), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+div.container{
+	padding: 10px;
+}
+.sombrabox{
+	width: 250px;
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  	text-align: center;
+  	background: #48e3ff;
+}
+.centro{
+	margin: auto;
+    width: 50%;
+}
+p{	color: #1536df;
+	font-size: 48px;
+	font-style: normal;
+	font-family: Cursive;
+}
