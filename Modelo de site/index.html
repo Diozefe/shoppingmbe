@@ -4,23 +4,60 @@
 <title>MyBazz</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/login.css">
 
 </head>
 <body>
 
-<div class="header">
-  <h1>MYBAZZ EASY</h1>
-  <p></p>
+<!--- efeito da tela de login --->
+  <div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img/avatar.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Usuário</b></label>
+      <input type="text" placeholder="Digite o nome do Usuário" name="uname" required>
+
+      <label for="psw"><b>Senha</b></label>
+      <input type="password" placeholder="Digite a Senha do Usuário" name="psw" required></br></br>
+        
+      <button type="submit">Logar</button></br></br>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Lembrar de mim.
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+      <span class="psw">Esqueceu sua <a href="#">senha?</a></span>
+    </div>
+  </form>
+</div>
+<!--- Final codigo login --->
+
+<!--- Navegação --->
+<div id="navbar">
+
+  <a href="#" id="logo">MyBazz Easy</a>
+  <div id="navbar-right">
+    <a class="active" href="#">HOME</a>
+    <a href="#contact">Contatos</a>
+    <a href="#">Produtos</a>
+    <a href="#">Vendas</a>
+     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">LOGIN</button>
+  </div>
 </div>
 
-<div class="navbar">
-  <a href="#">Inicio</a>
-  <a href="#">Produtos</a>
-  <a href="#">Contato</a>
-  <a href="#">Anuncie</a>
-  <a href="#" class="right">Cadastro</a>
+<div class="header" id="cabecalho">
+  <img src="img/testelogo.png">
+  
 </div>
+
 
 <div class="row">
   <div class="side">
@@ -49,11 +86,46 @@
   </div>
 </div>
 
-<div class="footer">
+<!---Rodapé--->
+<div class="footer" id="rodape">
   <p>Copyright &copy; 2018 - MyBazz Easy <br/>
 <a href="#" target="_blank"> Facebook | 
 <a href="#" target="_blank"> Twitter</p>
 </div>
+
+<!---javascrip dos eventos de tela (lembrar de fazer uma pasta para javascrip para simplicar codigo)--->
+<script>
+//Obtendo o modelo do login
+ 
+
+var modal = document.getElementById('id01');
+
+// Quando o usuário clica em qualquer lugar fora do modal, feche-o
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<!---Final login--->
+
+<!---JS navbar--->
+<script>
+// Quando o usuário rola Npx da parte superior do documento, redimensiona o preenchimento da barra de navegação e o tamanho da fonte do logotipo
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
+    document.getElementById("navbar").style.padding = "10px 10px";
+    document.getElementById("logo").style.fontSize = "24px";
+  } else {
+    document.getElementById("navbar").style.padding = "24px 10px";
+    document.getElementById("logo").style.fontSize = "30px";
+  }
+}
+</script>
+
+
 
 </body>
 </html>
