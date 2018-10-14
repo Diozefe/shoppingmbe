@@ -20,18 +20,14 @@ button {
     margin: 0;
     background-color: #4CAF50;
     color: white;
-    padding: 12px;
+    padding: 13.8px;
   text-decoration: none;
   font-size: 18px; 
   line-height: 25px;
   border-radius: 4px;
     border: none;
-    
-    cursor: pointer;
-   
+    cursor: pointer;  
 }
-
-
 
 /* Estilos extras para o botão de cancelamento */
 .cancelbtn {
@@ -48,7 +44,7 @@ button {
 }
 
 img.avatar {
-    width: 40%;
+    width: 30%;
     border-radius: 50%;
 }
 
@@ -73,7 +69,7 @@ span.psw {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 30px;
+    padding-top: 35px;
     border-radius: 4px;
 }
 
@@ -83,7 +79,7 @@ span.psw {
     margin: 5% auto 15% auto; /* 5% a partir do topo, 15% a partir do fundo e centrado */
     border: none;
     border-radius: 4px;
-    width: 38%; /* Poderia ser mais ou menos, dependendo do tamanho da tela*/
+    width: 36%; /* Poderia ser mais ou menos, dependendo do tamanho da tela*/
 }
 
 /* O botão Fechar(x) */

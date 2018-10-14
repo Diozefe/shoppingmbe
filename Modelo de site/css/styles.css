@@ -15,13 +15,16 @@ body {
 .header {
 	background-position: center top;
 	background-repeat: no-repeat;
-	padding-top: 130px;
-    padding-bottom: 130px;
+	padding-top: 200px;
+    padding-bottom: 100px;
     text-align: center;
     background: url(../img/back.jpg);
     background-size: cover;
     background-attachment: fixed;
     color: white;
+    width: 100%;
+    height: auto;
+
 }
 
 /* Aumentar o tamanho da fonte do cabeçalho*/
@@ -57,7 +60,7 @@ a barra de navegação superior */
   float: left;
   color: white;
   text-align: center;
-  padding: 12px;
+  padding: 10px;
   text-decoration: none;
   font-size: 18px; 
   line-height: 25px;
@@ -71,18 +74,22 @@ a barra de navegação superior */
 }
 
 #navbar a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: 0px 4px 0px lightgray;
+  color: #1B98E0;
 }
 
 #navbar a.active {
-  background-color: dodgerblue;
+  background-color: #1B98E0;
   color: white;
 }
 
 #navbar-right {
   float: right;
 }
+
+/* botao */
+
+
 
 /* Column container */
 .row {  
@@ -151,4 +158,73 @@ div#rodape {
   #navbar-right {
     float: none;
   }
+}
+
+@keyframes neon {
+  from {
+    filter: drop-shadow(0 0 0 var(--cor-neon));
+  }
+  to {
+    filter: drop-shadow(0 0 30px var(--cor-neon));
+  }
+} 
+
+img {
+  animation: neon 1s alternate infinite ease-in-out;
+}
+
+.neon {
+  --cor-neon: #1B98E0;
+}
+img#center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+/*----------efeito linha navbar ------*/
+
+
+
+.btns {
+  text-align: center;
+  
+}
+
+.efeito {
+  border: none;
+  color: #ffffff;
+  padding: 20px;
+  font-size: 46.4px;
+  line-height: 160px;
+  border-radius: 23px;
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 400ms ease;
+  display: block;
+  top: -260px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.efeito {
+  background: #1B98E0;
+  transform-style: preserve-3d;
+}
+.efeito:after {
+  top: -100%;
+  left: 0px;
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  background:  #4CAF50;
+  border-radius: 23px;
+  box-sizing: border-box;
+  content: 'EASY';
+  transform-origin: left bottom;
+  transform: rotateX(90deg);
+}
+.efeito:hover {
+  transform-origin: center bottom;
+  transform: rotateX(-90deg) translateY(100%);
 }
