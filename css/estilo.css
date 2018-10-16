@@ -1,18 +1,25 @@
 @charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css?family=Acme|Caveat+Brush|Concert+One|Cookie|Fugaz+One|Gloria+Hallelujah|Lobster|Lobster+Two|Pacifico|Permanent+Marker|Righteous');
 body{
 	background-image:url("../img/fundoteste.png");
 	margin: 0px;
 }
-#divsuperior{
+#divsup2{
 	background: #8effe4
 }
-.btnSuperior{
-	padding: 13px 11px;
+.btnSuperior, .btnDireita{
+	padding: 10px 13px;
 	float: left;
 	width: auto;
 	border: none;
 	display: block;
 	outline: 0;
+}
+.btnDireita{
+	float: right;
+}
+.testecor{
+	background-color: #ff3de0;
 }
 .btnSupEspaco{
 	white-space: normal;
@@ -37,4 +44,12 @@ p{	color: #1536df;
 	font-size: 48px;
 	font-style: normal;
 	font-family: Cursive;
+}
+a{
+	color: black;
+	cursor: pointer;
+	text-decoration: none;
+	font-family: cursive;
+	font-size: 18px;
+	text-align: justify;
 }
