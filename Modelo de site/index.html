@@ -40,6 +40,34 @@
     </div>
   </form>
 </div>
+<div id="id02" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img/avatar.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Nome</b></label>
+      <input type="text" placeholder="Digite o nome do Usuário" name="uname" required>
+      <label for="uname"><b>Sobre Nome</b></label>
+      <input type="text" placeholder="Digite o nome do Usuário" name="uname" required>
+      <label for="psw"><b>Senha</b></label>
+      <input type="password" placeholder="Digite a Senha do Usuário" name="psw" required></br>
+        
+      <button type="submit">Criar</button></br></br>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Lembrar de mim.
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancelar</button>
+      <span class="psw">Esqueceu sua <a href="#">senha?</a></span>
+    </div>
+  </form>
+</div>
 <!--- Final codigo login --->
 
 <!--- Navegação --->
@@ -52,7 +80,8 @@
     <a href="#">Produtos</a>
     <a href="#">Vendas</a>
     <a href="#">Contatos</a>
-     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">LOGIN</button>
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Entrar</button>
+    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Criar Conta</button>
   </div>
 </div>
 
@@ -100,9 +129,17 @@
 
 <!---javascrip dos eventos de tela (lembrar de fazer uma pasta para javascrip para simplicar codigo)--->
 <script>
-//Obtendo o modelo do login
- 
+//Obtendo o modelo de Criar Conta
+var criarconta = document.getElementById('id02');
 
+// Quando o usuário clica em qualquer lugar fora do modal, feche-o
+window.onclick = function(event) {
+    if (event.target == criarconta) {
+        ciarconta.style.display = "none";
+    }
+}
+
+<!---Final Criar Conta--->
 var modal = document.getElementById('id01');
 
 // Quando o usuário clica em qualquer lugar fora do modal, feche-o
