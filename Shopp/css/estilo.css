@@ -76,13 +76,18 @@ Video Background
     
 }
 
-.video-background .title-video {
+.video-background .title-video{
     
     position: absolute;
-    top: 30%;
+    top: 0;
     width: 100%;
     text-align: center;
     color: #fff;
+}
+.imgvideoajust{
+	height: 100%;
+	width: 100%
+	
 }
 
 /* -------------------------------- 
@@ -124,7 +129,7 @@ header {
   left: 0;
   height: 50px;
   width: 100%;
-  background: #31353d;
+  background: #61c9fc;
   text-align: center;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
   z-index: 4;
@@ -267,7 +272,7 @@ header {
     color: #FFF;
   }
   .no-touch #main-nav ul a:hover {
-    background: #DEBA6F;
+    background: #784cde;
     color: #FFF;
     transition: 1.5s;
   
