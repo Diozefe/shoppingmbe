@@ -184,7 +184,12 @@ img#center {
 }
 /*----------efeito linha navbar ------*/
 
-
+div.fundo-user{
+	width: 100%;
+	height: 100%; 
+	background-image: url('../img/fundologcont.jpg');
+	border-radius: inherit;
+}
 
 .btns {
   text-align: center;
