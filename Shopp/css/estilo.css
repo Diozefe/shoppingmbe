@@ -32,7 +32,8 @@ a {
 }
 
 img {
-  max-width: 100%;
+	position:absolute;
+  	max-width: 100%;
 }
 
 /*Efeito Hover Cool Link*/
@@ -69,10 +70,11 @@ Video Background
 -------------------*/
 
 #bg_video {
-   position: fixed; 
+   position: relative; 
     z-index: -1000;
-    width: 100%;
+    width: auto;
     height: auto;
+    max-width: 100%
     
 }
 
