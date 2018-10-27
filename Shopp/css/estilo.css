@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Orbitron|Press+Start+2P');
+
 /* -------------------------------- 
 
 
@@ -16,14 +18,11 @@ html * {
 }
 
 body {
+  animation: anim 8s infinite;
   font-size: 100%;
-  font-family: "PT Sans", sans-serif;
+  font-family: ;
   color: #31353d;
-  background-color: #eeeff7;
-}
-body.overflow-hidden {
-  /* evitar 2 barras de rolagem verticais no ie e no firefox quando o carrinho estiver visível */
-  overflow: hidden;
+  
 }
 
 a {
@@ -32,10 +31,19 @@ a {
 }
 
 img {
-	position:absolute;
-  	max-width: 100%;
+  max-width: 100%;
 }
 
+h1#Home {
+  background-color: white;
+  font-size: 25px;
+  margin-top: 0px;
+  text-align: center;
+}
+.main-conteudo h2{
+  text-align: center;
+  border-bottom: 2px solid black;
+}
 /*Efeito Hover Cool Link*/
 .cool-link::after {
   content: '';
@@ -49,48 +57,7 @@ img {
   width: 100%;
   transition: width 1s;
 }
-/*background
-.back {
-  background-position: center top;
-  background-repeat: no-repeat;
-  padding-top: 300px;
-    padding-bottom: 300px;
-    text-align: center;
-    background: url(../img/back.jpg) no-repeat center center fixed;
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
-    width: 100%;
-    height: auto;
 
-}
-*/
-/*  --------------
-Video Background 
--------------------*/
-
-#bg_video {
-   position: relative; 
-    z-index: -1000;
-    width: auto;
-    height: auto;
-    max-width: 100%
-    
-}
-
-.video-background .title-video{
-    
-    position: absolute;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    color: #fff;
-}
-.imgvideoajust{
-	height: 100%;
-	width: 100%
-	
-}
 
 /* -------------------------------- 
 
@@ -99,7 +66,7 @@ Módulos - partes reutilizáveis ​​do nosso design
 -------------------------------- */
 .cd-container {
   /* 
-essa classe é usada para alinhar horizontalmente a galeria de itens */
+  essa classe é usada para alinhar horizontalmente a galeria de itens */
   position: relative;
   width: 90%;
   max-width: 1200px;
@@ -131,7 +98,7 @@ header {
   left: 0;
   height: 50px;
   width: 100%;
-  background: #61c9fc;
+  background: #31353d;
   text-align: center;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
   z-index: 4;
@@ -188,10 +155,6 @@ header {
   }
 }
 
-#cd-cart-trigger {
-  right: 0;
-}
-
 #main-nav{
   position: fixed;
   top: 0;
@@ -228,11 +191,12 @@ header {
   left: 0;
 }
 #main-nav ul a {
+   font-family: 'Audiowide', cursive;
   display: block;
   height: 50px;
   line-height: 50px;
   padding: 0 1em;
-  border-bottom: 1px solid #e0e6ef;
+  
 }
 #main-nav ul .current {
   box-shadow: inset 3px 0 #435779;
@@ -274,13 +238,119 @@ header {
     color: #FFF;
   }
   .no-touch #main-nav ul a:hover {
-    background: #784cde;
+    background: #DEBA6F;
     color: #FFF;
     transition: 1.5s;
-  
+
   }
 }
 .no-js #main-nav {
   position: fixed;
 }
+
+/*-------------
+    Background
+    ---------------*/
+
+    .background {
+      background-position: bottom;
+      background-repeat: no-repeat;
+      position: relative;
+      padding-top: 110px;
+      padding-bottom: 100px;
+      text-align: center;
+      background: url(../img/back.jpg) bottom;
+      background-size: cover;
+      background-attachment: fixed;
+      width: 100%;
+      height: auto;
+
+    }
+
+    /*-----------
+
+
+    --------------*/
+    /* Column container */
+    
+
+    .row {  
+      background: #fff;
+      color: #aaa;
+      width: 1000px;
+      max-width: 84%;
+      margin: 10% auto;
+      padding: 5%;
+      border-radius: 4px;
+      
+    }
+
+    
+    /* Main column */
+    .main-conteudo { 
+
+      -ms-flex: 70%; /* IE10 */
+      flex: 70%;
+      background-color: white;
+      padding: 20px;
+    }
+
+    /* Fake image, just for this example */
+    .fakeimg {
+      background-color: #aaa;
+      width: 100%;
+      padding: 20px;
+    }
+
+    /* Footer */
+    .footer {
+      color: white;
+      background: #31353d;
+      padding: 90px;
+      text-align: center;
+      
+    }
+
+    /*---efeito de pisca pisca (basta chamar usando o (animation: anim 8s infinite;)---*/
+    @keyframes anim {
+      0% {
+        background: #2E5266;
+      }
+      20% {
+        background: #6E8898;
+      }
+      40% {
+        background: #9FB1BC;
+      }
+      60% {
+        background: #D3D0CB;
+      }
+      80% {
+        background: #E2C044;
+      }
+      100% {
+        background: #0CA98A;
+      }
+    }
+    /*------Fim Efeito Rodapé Pisca Pisca-----*/
+
+    /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 700px) {
+      .row {   
+        flex-direction: column;
+      }
+    }
+
+    /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+    @media screen and (max-width: 400px) {
+      .navbar a {
+        float: none;
+        width: 100%;
+      }
+    }
+
+
+
+
+
 

@@ -1,5 +1,5 @@
 jQuery(document).ready(function($){
-	//if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
+	//Se você alterar este ponto de interrupção no arquivo style.css (ou _layout.scss se você usar o SASS), não se esqueça de atualizar este valor também
 	var $L = 1200,
 		$menu_navigation = $('#main-nav'),
 		$cart_trigger = $('#cd-cart-trigger'),
@@ -7,7 +7,7 @@ jQuery(document).ready(function($){
 		$lateral_cart = $('#cd-cart'),
 		$shadow_layer = $('#cd-shadow-layer');
 
-	//open lateral menu on mobile
+	//menu lateral aberto no celular
 	$hamburger_icon.on('click', function(event){
 		event.preventDefault();
 		//close cart panel (if it's open)
@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
 	//close lateral cart or lateral menu
 	$shadow_layer.on('click', function(){
 		$shadow_layer.removeClass('is-visible');
-		// firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
+		// As transições do firefox quebram quando o estouro do pai é alterado, então precisamos aguardar o fim da transmissão para dar ao corpo um estouro oculto
 		if( $lateral_cart.hasClass('speed-in') ) {
 			$lateral_cart.removeClass('speed-in').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
 				$('body').removeClass('overflow-hidden');
