@@ -7,64 +7,35 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
-
+	
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" type="text/css" href="css/estilo.css"> <!-- Gem style -->
-	<link rel="stylesheet" type="text/css" href="css/login.css">
 	<link rel="stylesheet" type="text/css" href="css/orbita.css">
+	
 
 	<title>MyBazz Easy</title>
 
+	
 </head>
 <body class="foo">
-	<!--- efeito da tela de login --->
-	<div id="id01" class="modal">
-
-		<form class="modal-content animate" action="/action_page.php">
-			<div class="fundo-user">
-				<div class="imgcontainer">
-					<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
-
-				</div>
-
-				<div class="container-form">
-					<label for="uname"><b>Usuário</b></label>
-					<input type="text" placeholder="Digite o nome do Usuário" name="uname" required>
-
-					<label for="psw"><b>Senha</b></label>
-					<input type="password" placeholder="Digite a Senha do Usuário" name="psw" required></br></br>
-
-					<button type="submit">Logar</button></br></br>
-					<label>
-						<input type="checkbox" checked="checked" name="remember"> Lembrar de mim.
-					</label>
-				</div>
-
-				<div class="container-form">
-					<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
-					<span class="psw">Esqueceu sua <a style="color: #2ec2c1;" href="#">senha?</a></span>
-				</div>
-			</div>
-		</form>
-	</div>
-	<!-- Fim login -->
 
 	<div class="container">
 		<header>
 			<div id="logo"><a href="#"><img src="img/loja.png" alt="Homepag"></div></a>
 
+
 			<div id="cd-hamburger-menu"><a class="cd-img-replace" href="#0">Menu</a></div>
+
+
 		</header>
 
 		<nav id="main-nav">
 			<ul>
-				<li><a href="index.html" class="cool-link"><i class="fab fa-fort-awesome"></i>Inicio</a></li>
-				<li><a href="#" class="cool-link"><i class="fas fa-shopping-cart"></i>Passear</a></li>
-				<li><a href="lojas.html" class="cool-link"><i class="fas fa-store"></i> Lojas</a></li>
+				<li><a href="index.html" class="cool-link"><i class="fab fa-fort-awesome"></i> Home</a></li>
+				<li><a href="Lojas.html" class="cool-link"><i class="fas fa-store"></i> Lojas</a></li>
+				<li><a href="#" class="cool-link"><i class="fas fa-shoe-prints"></i> Tour</a></li>
 				<li><a href="#" class="cool-link"><i class="fas fa-handshake"></i> Contato</a></li>
 
-				<button  onclick="document.getElementById('id01').style.display='block'" style="margin: 0 25px;">Logar</button>
-				<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Cadastro</button>
 			</ul>
 
 		</nav>
@@ -86,74 +57,76 @@
 			</div>
 
 		</div>
-			<h1 id="Home">HOME</h1>
+
+		<h1 id="Home">HOME</h1>
+		
 		<div class="row">
 			<div id="conteudo-1" class="main-conteudo">
 				<h2>INTRO</h2>
-				</br>
-				<div class="fakeimg" style="height:200px;">Imagem</div>
-				<p>Some text..</p>
-				<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-				<br>
-				<h2>TITLE HEADING</h2>
-				
-				<div class="fakeimg" style="height:200px;">Image</div>
-				<p>Some text..</p>
-				<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-			</div>
-
+			</br>
+			<div class="fakeimg" style="height:200px;">Imagem</div>
+			<p>Some text..</p>
+			<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+			<br>
+			<h2>TITLE HEADING</h2>
+			
+			<div class="fakeimg" style="height:200px;">Image</div>
+			<p>Some text..</p>
+			<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
 		</div>
-
-		<div class="row">
-			<div id="conteudo-2" class="main-conteudo">
-				<h2>PRODUTOS</h2>
-				</br>
-				<div class="fakeimg" style="height:200px;">Imagem</div>
-				<p>Some text..</p>
-				<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-				<br>
-				<h2>TITLE HEADING</h2>
-				
-				<div class="fakeimg" style="height:200px;">Image</div>
-				<p>Some text..</p>
-				<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-			</div>
-
-		</div>
-
-		<div class="row">
-			<div id="conteudo-3" class="main-conteudo">
-				<h2>LOJAS</h2>
-				</br>
-				<div class="fakeimg" style="height:200px;">Imagem</div>
-				<p>Some text..</p>
-				<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-				<br>
-				<h2>TITLE HEADING</h2>
-				
-				<div class="fakeimg" style="height:200px;">Image</div>
-				<p>Some text..</p>
-				<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-			</div>
-
-		</div>
-
-
-		<!-- Footer -->
-		<footer class="footer"> 
-			<p>Rodapé</p> 
-		</footer>
-
-		
 
 	</div>
 
+	<div class="row">
+		<div id="conteudo-2" class="main-conteudo">
+			<h2>PRODUTOS</h2>
+		</br>
+		<div class="fakeimg" style="height:200px;">Imagem</div>
+		<p>Some text..</p>
+		<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+		<br>
+		<h2>TITLE HEADING</h2>
+		
+		<div class="fakeimg" style="height:200px;">Image</div>
+		<p>Some text..</p>
+		<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+	</div>
+
+</div>
+
+<div class="row">
+	<div id="conteudo-3" class="main-conteudo">
+		<h2>LOJAS</h2>
+	</br>
+	<div class="fakeimg" style="height:200px;">Imagem</div>
+	<p>Some text..</p>
+	<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+	<br>
+	<h2>TITLE HEADING</h2>
 	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="js/main.js"></script> <!-- Gem jQuery -->
+	<div class="fakeimg" style="height:200px;">Image</div>
+	<p>Some text..</p>
+	<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+</div>
+
+</div>
 
 
-	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+<!-- Footer -->
+<footer class="footer"> 
+	<p>Rodapé</p> 
+</footer>
+
+
+
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/main.js"></script> <!-- Gem jQuery -->
+
+
+<script src="js/modernizr.js"></script> <!-- Modernizr -->
 
 
 
