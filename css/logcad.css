@@ -26,7 +26,7 @@ p{
     justify-content: center;
     align-items: center;
 }
-#dvcad02{
+#dvcad02,#dvlog02{
     background: #FFFFFF;
     border-radius: 2%;
     width: 700px;
@@ -34,24 +34,24 @@ p{
     display: flex;
     box-shadow: 0 4px 15px 1px rgba(0, 0, 0, 0.5), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#bdcad,div{    overflow: hidden;}#bdcad{background: rgba(138, 138, 138, 0.3)
+#bdcad,#bdlog,div{    overflow: hidden;}#bdcad{background: rgba(138, 138, 138, 0.3)
                                  }
-#dvcad03, #dvcad05, #dvcad04,#dvcad04-01{
+#dvcad03,#dvlog03,#dvcad04,#dvlog04,#dvcad04-01,#dvlog04-01,#dvcad05,#dvlog05{
     width: 100%;
     height: 100%;
     display: flex;
 }
-#dvcad03,#dvcad04,#dvcad04-01,#dvcad05{background: none;}
-#dvcad03, .divesquerda{
+#dvcad03,#dvlog03,#dvcad04,#devlog04,#dvcad04-01,#dvlog04-01,#dvcad05,#devlog05{background: none;}
+#dvcad03,#devlog03, .divesquerda{
     float: left;
     flex-direction: column;
 }
-#dvcad04-01{flex-direction: column;}
-#dvcad04{
+#dvcad04-01, #devlog04-01{flex-direction: column;}
+#dvcad04, #devlog04{
     height: 100px;
     width: 100%;
 }
-#dvcad05, .divdireita{float: right;}
+#dvcad05,#devlog05, .divdireita{float: right;}
 .divesquerda,.divdireita,.dividir{
     width: 50%;
     height: 100%;
