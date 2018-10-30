@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sign IN|UP</title>
+  
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=PT+Serif|Poppins'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div id="app" class="base">
+	<div v-if="signUp">
+		<div class="aim">
+			<h2>E aí Pessoa ;)</h2>
+			<h6>Digite seus dados pessoais e comece a viagem comigo</h6>
+			<button @click="signUp = !signUp" class="btn ">Logar</button>
+		</div>
+		<div class="formArea">
+			<h2>Logar</h2>
+			
+			<div class="form-group">
+				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+			</div>
+			<div class="form-group">
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+			</div>
+
+			<button class="btn">Cadastrar</button>
+			
+		</div>
+	</div>
+	
+	<div v-else>
+		<div class="aim in">
+			<h2>Bem vindo de volta!</h2>
+			<h6>Para manter contato comigo, faça o login com suas informações pessoais</h6>
+			<button @click="signUp = !signUp" class="btn">Cadastrar</button>
+		</div>
+		<div class="formArea in">
+			<h2>Cadastro</h2>
+		
+			<div class="form-group">
+				<input type="text" class="form-control" id="exampleInputName1" placeholder="Nome">
+			</div>
+			<div class="form-group">
+				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+			</div>
+			<div class="form-group">
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+			</div>
+
+			<button class="btn">Logar</button>
+		</div>
+		
+	</div>
+</div>
+  <script src='https://cdn.jsdelivr.net/npm/vue'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
