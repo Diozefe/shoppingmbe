@@ -1,13 +1,104 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="pt-br" class="no-js">
 <head>
-<meta charset="ISO-8859-1">
- <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
- <link href='css/estilo.css' rel='stylesheet' type='text/css'>
-<meta charset="utf-8">
-<title>MyBazz Easy</title>
+	<link rel="shortcut icon" type="image/x-png" href="img/loja.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" type="text/css" href="css/passeio.css"> <!-- Gem style -->
+	<!--<link rel="stylesheet" type="text/css" href="css/orbita.css">-->
+	
+
+	<title>MyBazz Easy</title>
+
+	
 </head>
-<body>
-Olá Mundo!!!
+<body class="foo">
+
+	<div class="container">
+		<header>
+			<div id="logo"><a href="#"><img src="img/loja.png" alt="Homepag"></a></div>
+
+
+			<div id="cd-hamburger-menu"><a class="cd-img-replace" href="#0">Menu</a></div>
+		</header>
+
+		<nav id="main-nav">
+			<ul>
+				<li><a href="index.html" class="cool-link"><i class="fab fa-fort-awesome"></i> Home</a></li>
+				<li><a href="Lojas.html" class="cool-link"><i class="fas fa-store"></i> Lojas</a></li>
+				<li><a href="#" class="cool-link"><i class="fas fa-shoe-prints"></i> Passeio</a></li>
+				<li><a href="#" class="cool-link"><i class="fas fa-handshake"></i> Contato</a></li>
+
+			</ul>
+
+		</nav>
+
+		<!--- Carrosel SBT --->
+	<div class="background">
+		<div id="slider" class="container-slider">
+			<ul class="slider-wrapper">
+				<li class="current-slide">
+					<img src="img/1.jpg" title="" alt="">
+
+					<div class="caption">
+						<h2 class="slider-title">Slide one</h2>
+						<p>Temos aqui uma imagem que representa algo na vida.</p>
+					</div>
+				</li>
+
+				<li>
+					<img src="img/2.jpg" title="" alt="">
+
+					<div class="caption">
+						<h2 class="slider-title">Slide 2</h2>
+						<p>Outro Slide que representa algo!</p>
+					</div>
+				</li>
+
+				<li>
+					<img src="img/.jpg" title="" alt="">
+
+					<div class="caption">
+						<h2 class="slider-title">Slide 3</h2>
+						<p>A incrivel nazare confusa!</p>
+					</div>
+				</li>
+
+				<li>
+					<img src="img/4.jpg" title="" alt="">
+
+					<div class="caption">
+						<h2 class="slider-title">Slide 4</h2>
+						<p>Carrosel</p>
+					</div>
+				</li>
+			</ul>
+			<!-- Sombras -->
+			<div class="slider-shadow"></div>
+
+			<!-- Controles de Navegacion -->
+			<ul id="control-buttons" class="control-buttons"></ul>
+		</div>
+	</div>
+</div>
+	<h1 id="Tour">Passeio</h1>
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/main.js"></script> <!-- Gem jQuery -->
+
+
+<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+<script  src="js/slide.js"></script>
+
 </body>
 </html>
