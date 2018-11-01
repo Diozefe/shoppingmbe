@@ -6,9 +6,15 @@
 Estilo principal
 
 -------------------------------- */
+html{
+  font-size: 70%;
+}
 html * {
+   margin: 0;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 *, *:after, *:before {
@@ -18,9 +24,10 @@ html * {
 }
 
 body {
-  animation: anim 8s infinite;
+  background: #395284;
+ font-family: "Audiowide";
   font-size: 100%;
-  font-family: "Agency FB", cursive;
+  font-family: ;
   color: #31353d;
   
 }
@@ -30,9 +37,9 @@ a {
   text-decoration: none;
 }
 
-img {
+/*img {
   max-width: 100%;
-}
+}*/
 
 h1#Home {
   color: #fff;
@@ -41,6 +48,7 @@ h1#Home {
   margin-top: 0px;
   text-align: center;
 }
+
 .main-conteudo h2{
   text-align: center;
   border-bottom: 2px solid black;
@@ -192,12 +200,13 @@ header {
   left: 0;
 }
 #main-nav ul a {
-   font-family: 'Audiowide', cursive;
-  display: block;
-  height: 50px;
-  line-height: 50px;
-  padding: 0 1em;
-  
+font-size: 18px;
+ font-family: 'Audiowide', cursive;
+ display: block;
+ height: 50px;
+ line-height: 50px;
+ padding: 0 1em;
+ 
 }
 #main-nav ul .current {
   box-shadow: inset 3px 0 #435779;
@@ -224,7 +233,8 @@ header {
   }
   #main-nav li {
     display: inline-block;
-    margin-left: 1em;
+    /*margin-left: 1em;*/
+    margin-left: 0em;
   }
   #main-nav ul a {
     display: inline-block;
@@ -241,7 +251,7 @@ header {
     color: #FFF;
   }
   .no-touch #main-nav ul a:hover {
-    background: #F2AF29;
+    background: #395284;
     color: #FFF;
     transition: 1.5s;
 
@@ -251,8 +261,9 @@ header {
   position: fixed;
 }
 
+
 /*-------------
-    Background
+    Background-header
     ---------------*/
 
     .background {
@@ -260,9 +271,9 @@ header {
       background-repeat: no-repeat;
       position: relative;
       padding-top: 110px;
-      padding-bottom: 100px;
+      padding-bottom: 60px;
       text-align: center;
-      background: #F2AF29;
+      background: #ffc554;
       /*background: url(../img/back.jpg) bottom;*/
       background-size: cover;
       background-attachment: fixed;
@@ -282,32 +293,38 @@ header {
       background: #fff;
       color: #aaa;
       width: 1100px;
-      max-width: 84%;
-      margin: 6% auto;
-      padding: 5%;
-      border-radius: 4px;
+      max-width: 90%;
+      margin: 5% auto;
+      padding: 4%;
+      border-radius: 6px;
+      padding-top: 1%;
+      padding-bottom: 1%;
       
     }
 
     
     /* Main column */
     .main-conteudo { 
-
+      color: #fff;
+      margin: 4% auto;
+      font-size: 18px;
+     border-radius: 6px;
       -ms-flex: 70%; /* IE10 */
       flex: 70%;
-      background-color: white;
-      padding: 20px;
+      background-color: #ffc554;
+      padding: 30px;
     }
 
     /* Fake image, just for this example */
     .fakeimg {
-      background-color: #aaa;
+      background-color: grey;
       width: 100%;
       padding: 20px;
     }
 
     /* Footer */
     .footer {
+      font-size: 20px;
       color: white;
       background: #31353d;
       padding: 90px;
@@ -315,46 +332,6 @@ header {
       
     }
 
-    /*---efeito de pisca pisca (basta chamar usando o (animation: anim 8s infinite;)---*/
-    @keyframes anim {
-      0% {
-        background: #500ac1;
-      }
-      9% {
-        background: #492996;
-      }
-      18% {
-        background: #4b80f5;
-      }
-      27% {
-        background: #4c9bca;
-      }
-      36% {
-        background: #4dd1de;
-      }
-      45% {
-        background: #00e8ff;
-      }
-      54%{
-        background:#45c1c7;
-      }
-      63%{
-        background:#4c9bca;
-      }
-      72%{
-        background:#4b80f5;
-      }
-      81%{
-        background:#874eef;
-      }
-      90% {
-        background: #7b33ef;
-      }
-      100%{
-        background: #500ac1;
-      }
-    }
-    /*------Fim Efeito Rodapé Pisca Pisca-----*/
 
     /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
     @media screen and (max-width: 700px) {
