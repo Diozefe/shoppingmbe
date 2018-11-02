@@ -27,14 +27,14 @@ p{
     align-items: center;
 }
 #dvcad02,#dvlog02{
-    background: #FFFFFF;
+    background: #ff852b;
     border-radius: 2%;
     width: 700px;
     height: 550px;
     display: flex;
     box-shadow: 0 4px 15px 1px rgba(0, 0, 0, 0.5), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#bdcad,#bdlog,div{    overflow: hidden;}#bdcad{background: rgba(138, 138, 138, 0.3)
+#bdcad,#bdlog,div{    overflow: hidden;}#bdcad, #bdlog{background: #31353d;
                                  }
 #dvcad03,#dvlog03,#dvcad04,#dvlog04,#dvcad04-01,#dvlog04-01,#dvcad05,#dvlog05{
     width: 100%;
@@ -61,7 +61,7 @@ p{
 #datanascimento, #sexo{text-transform: capitalize; text-align: right; padding: 0}
 input, select {
     color: #757575;
-    box-shadow: 0 3px 10px 0px rgb(141, 143, 144);
+    box-shadow: 0 3px 10px 0 rgb(141, 143, 144);
     height: 50%;
     width: 100%;
     background: #FFFFFF;
@@ -84,7 +84,7 @@ label{
     color: #757575;
     background: none;
     border-radius: 4%;
-    box-shadow: 0 3px 10px 0px rgb(141, 143, 144);
+    box-shadow: 0 3px 10px 0 rgb(141, 143, 144);
 }
 .grupo-form{
     height: 16.66666666667%;
