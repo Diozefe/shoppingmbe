@@ -10,8 +10,8 @@
 	
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" type="text/css" href="css/passeio.css"> <!-- Gem style -->
-	<!--<link rel="stylesheet" type="text/css" href="css/orbita.css">-->
-	
+	<link rel="stylesheet" href="css/produto.css"> <!-- Resource style -->
+	<script src="js/modern.js"></script> <!-- Modernizr -->
 
 	<title>MyBazz Easy</title>
 
@@ -20,14 +20,14 @@
 
 
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
-
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 
 	<script  src="js/slide.js"></script>
+	
 </head>
 <body class="foo">
 
-	<div class="container">
+	<div id="navegacao" class="container">
 		<header>
 			<div id="logo"><a href="#"><img src="img/loja.png" alt="Homepag"></a></div>
 
@@ -47,7 +47,7 @@
 		</nav>
 
 		<!--- Carrosel SBT --->
-		<div class="background">
+		<div id="carrosel" class="background">
 			<div id="slider" class="container-slider">
 				<ul class="slider-wrapper">
 					<li class="current-slide">
@@ -94,9 +94,212 @@
 			</div>
 		</div>
 	</div>
-	 <button class="button"> PASSEIO</button>
+	<button class="button"> PASSEIO</button>
+
+	<div class="row">
+		<ul class="cd-gallery">
+			<li>
+				<a href="#">
+					<ul class="cd-item-wrapper">
+						<li class="selected">
+							<img src="img/ugmonk-tshirt-1.jpg" alt="Preview image">
+						</li>
+
+						<li class="move-right" data-sale="true" data-price="$22">
+							<img src="img/ugmonk-tshirt-2.jpg" alt="Preview image">
+						</li>
+
+						<li>
+							<img src="img/ugmonk-tshirt-3.jpg" alt="Preview image">
+						</li>
+					</ul> <!-- cd-item-wrapper -->
+				</a>
+
+				<div class="cd-item-info">
+					<b><a href="#">Produto | Loja</a></b>
+
+					<em class="cd-price">$26</em>
+				</div> <!-- cd-item-info -->
+			</li>
+
+			<li>
+				<a href="#">
+					<ul class="cd-item-wrapper">
+						<li class="selected">
+							<img src="img/ugmonk-cap-1.jpg" alt="Preview image">
+						</li>
+
+						<li class="move-right">
+							<img src="img/ugmonk-cap-2.jpg" alt="Preview image">
+						</li>
+
+						<li>
+							<img src="img/ugmonk-cap-3.jpg" alt="Preview image">
+						</li>
+					</ul> <!-- cd-item-wrapper -->
+				</a>
+
+				<div class="cd-item-info">
+					<b><a href="#0">Produto | Loja</a></b>
+
+					<em class="cd-price">$42</em>
+				</div> <!-- cd-item-info -->
+			</li>
+
+			<li>
+				<a href="#">
+					<ul class="cd-item-wrapper">
+						<li class="selected">
+							<img src="img/ugmonk-bag-1.jpg" alt="Preview image">
+						</li>
+
+						<li class="move-right">
+							<img src="img/ugmonk-bag-2.jpg" alt="Preview image">
+						</li>
+
+						<li>
+							<img src="img/ugmonk-bag-3.jpg" alt="Preview image">
+						</li>
+					</ul> <!-- cd-item-wrapper -->
+				</a>
+
+				<div class="cd-item-info">
+					<b><a href="#0">Produto | Loja</a></b>
+
+					<em class="cd-price">$235</em>
+				</div> <!-- cd-item-info -->
+			</li>
+
+			<li>
+				<a href="#">
+					<ul class="cd-item-wrapper">
+						<li class="selected">
+							<img src="img/ugmonk-tshirt-1.jpg" alt="Preview image">
+						</li>
+
+						<li class="move-right" data-sale="true" data-price="$22">
+							<img src="img/ugmonk-tshirt-2.jpg" alt="Preview image">
+						</li>
+
+						<li>
+							<img src="img/ugmonk-tshirt-3.jpg" alt="Preview image">
+						</li>
+					</ul> <!-- cd-item-wrapper -->
+				</a>
+
+				<div class="cd-item-info">
+					<b><a href="#0">Produto | Loja</a></b>
+
+					<em class="cd-price">$26</em>
+				</div> <!-- cd-item-info -->
+			</li>
+
+			<li>
+				<a href="#">
+					<ul class="cd-item-wrapper">
+						<li class="selected">
+							<img src="img/ugmonk-cap-1.jpg" alt="Preview image">
+						</li>
+
+						<li class="move-right">
+							<img src="img/ugmonk-cap-2.jpg" alt="Preview image">
+						</li>
+
+						<li>
+							<img src="img/ugmonk-cap-3.jpg" alt="Preview image">
+						</li>
+					</ul> <!-- cd-item-wrapper -->
+				</a>
+
+				<div class="cd-item-info">
+					<b><a href="#0">Produto | Loja</a></b>
+
+					<em class="cd-price">$42</em>
+				</div> <!-- cd-item-info -->
+			</li>
+
+			<li>
+				<a href="#">
+					<ul class="cd-item-wrapper">
+						<li class="selected">
+							<img src="img/ugmonk-bag-1.jpg" alt="Preview image">
+						</li>
+
+						<li class="move-right">
+							<img src="img/ugmonk-bag-2.jpg" alt="Preview image">
+						</li>
+
+						<li>
+							<img src="img/ugmonk-bag-3.jpg" alt="Preview image">
+						</li>
+					</ul> <!-- cd-item-wrapper -->
+				</a>
+
+				<div class="cd-item-info">
+					<b><a href="#0">Produto | Loja</a></b>
+
+					<em class="cd-price">$235</em>
+				</div> <!-- cd-item-info -->
+			</li>
+			<li>
+				<a href="#">
+					<ul class="cd-item-wrapper">
+						<li class="selected">
+							<img src="img/ugmonk-cap-1.jpg" alt="Preview image">
+						</li>
+
+						<li class="move-right">
+							<img src="img/ugmonk-cap-2.jpg" alt="Preview image">
+						</li>
+
+						<li>
+							<img src="img/ugmonk-cap-3.jpg" alt="Preview image">
+						</li>
+					</ul> <!-- cd-item-wrapper -->
+				</a>
+
+				<div class="cd-item-info">
+					<b><a href="#0">Produto | Loja</a></b>
+
+					<em class="cd-price">$42</em>
+				</div> <!-- cd-item-info -->
+			</li>
+
+			<li>
+				<a href="#">
+					<ul class="cd-item-wrapper">
+						<li class="selected">
+							<img src="img/ugmonk-bag-1.jpg" alt="Preview image">
+						</li>
+
+						<li class="move-right">
+							<img src="img/ugmonk-bag-2.jpg" alt="Preview image">
+						</li>
+
+						<li>
+							<img src="img/ugmonk-bag-3.jpg" alt="Preview image">
+						</li>
+					</ul> <!-- cd-item-wrapper -->
+				</a>
+
+				<div class="cd-item-info">
+					<b><a href="#0">Produto | Loja</a></b>
+
+					<em class="cd-price">$235</em>
+				</div> <!-- cd-item-info -->
+			</li>
+		</ul> <!-- cd-gallery -->
+	</div>
+	<!-- Footer -->
+		<footer id="rodape" class="footer"> 
+			<p>Rodapé/Contato</p> 
+		</footer>
 </div>
 
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/jquery.mobile.min.js"></script>
+
+<script src="js/main_produto.js"></script> <!-- Resource jQuery -->
 
 
 
