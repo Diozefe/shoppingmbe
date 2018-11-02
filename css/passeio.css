@@ -25,7 +25,6 @@ body {
   font-size: 100%;
   font-family: "Audiowide";
   color: #31353d;
-  height: 100%;
   
 }
 
@@ -203,11 +202,11 @@ header {
 #main-nav ul a {
   font-size: 18px;
   font-family: 'Audiowide', cursive;
- display: block;
- height: 50px;
- line-height: 50px;
- padding: 0 1em;
- 
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 1em;
+
 }
 #main-nav ul .current {
   box-shadow: inset 3px 0 #435779;
@@ -234,7 +233,7 @@ header {
   }
   #main-nav li {
     display: inline-block;
-     margin-left: 0em;
+    margin-left: 0em;
   }
   #main-nav ul a {
     display: inline-block;
@@ -276,89 +275,138 @@ header {
   }
 }
 
-/*Background Slide*/
-.background {
-  background-position: bottom;
-  background-repeat: no-repeat;
-  position: relative;
-  padding-top: 110px;
-  padding-bottom: 60px;
-  text-align: center;
-  background: #ffc554;
-  /*background: url(../img/back.jpg) bottom;*/
-  background-size: cover;
-  background-attachment: fixed;
-  width: 100%;
-  height: auto;
+/*-------------
+    Background-body
+    ---------------*/
 
-}
+    body .background {
+     background: #970c23 center fixed;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     line-height: 1;
+     position: relative;
+     padding-top: 120px;
+     padding-bottom: 60px;
+     text-align: center;
+     width: 100%;
+     height: auto;
+
+   }
+
+   .background::before {
+    background: repeating-linear-gradient(
+      transparent,
+      transparent 2em,
+      rgba(45,25,25,0.3) 2em,
+      rgba(45,25,25,0.3) 2.5em,
+      transparent 2.5em,
+      transparent 4.5em,
+      rgba(45,25,25,0.3) 4.5em,
+      rgba(45,25,25,0.3) 6.5em,
+      transparent 6.5em,
+      transparent 7em,
+      rgba(45,25,25,0.3) 7em,
+      rgba(45,25,25,0.3) 9em
+      );
+    content: '';
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+  }
+  .background::after {
+    background: repeating-linear-gradient( 90deg,
+      transparent,
+      transparent 2em,
+      rgba(45,25,25,0.3) 2em,
+      rgba(45,25,25,0.3) 2.5em,
+      transparent 2.5em,
+      transparent 4.5em,
+      rgba(45,25,25,0.3) 4.5em,
+      rgba(45,25,25,0.3) 6.5em,
+      transparent 6.5em,
+      transparent 7em,
+      rgba(45,25,25,0.3) 7em,
+      rgba(45,25,25,0.3) 9em
+      );
+    content: '';
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  /* Column container */
 
 
 /* ---------------------------------------
   Slider 
- ----------------------------------------*/
+  ----------------------------------------*/
 
-.container-slider {
-  width: 900px;
-  margin: 20px auto 0;
-}
+  .container-slider {
+    width: 900px;
+    margin: 20px auto 0;
+  }
 
-.slider-wrapper {
-  z-index: 1;
-  position: relative;
-  width: 100%;
-  height: 400px;
-  background: #FFF;
-  border: 5px solid #4b5973;
-  overflow: hidden;
-}
+  .slider-wrapper {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: #FFF;
+    border: 5px solid #4b5973;
+    overflow: hidden;
+  }
 
-.slider-wrapper li {
-  display: none;
-}
+  .slider-wrapper li {
+    display: none;
+  }
 
-.slider-wrapper .current-slide {
-  display: block;
-}
+  .slider-wrapper .current-slide {
+    display: block;
+  }
 
-.slider-shadow {
-  width: 100%;
-  height: 15px;
-  position: relative;
-}
+  .slider-shadow {
+    width: 100%;
+    height: 15px;
+    position: relative;
+  }
 
-.slider-shadow:after, .slider-shadow:before {
-  content: '';
-  position: absolute;
-  background: #171c24;
-  height: 100%;
-  width: 50%;
-  left: 10px;
-  top: -20px;
-  -webkit-transform: rotate(-4deg);
-  -ms-transform: rotate(-4deg);
-  -o-transform: rotate(-4deg);
-  transform: rotate(-4deg);
-  -webkit-box-shadow: 0 0 15px 8px #171c24;
-  box-shadow: 0 0 15px 8px #171c24;
-}
+  .slider-shadow:after, .slider-shadow:before {
+    content: '';
+    position: absolute;
+    background: #171c24;
+    height: 100%;
+    width: 50%;
+    left: 10px;
+    top: -20px;
+    -webkit-transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+    -o-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+    -webkit-box-shadow: 0 0 15px 8px #171c24;
+    box-shadow: 0 0 15px 8px #171c24;
+  }
 
-.slider-shadow:before {
-  right: 10px;
-  left: auto;
-  -webkit-transform: rotate(4deg);
-  -ms-transform: rotate(4deg);
-  -o-transform: rotate(4deg);
-  transform: rotate(4deg);
-}
+  .slider-shadow:before {
+    right: 10px;
+    left: auto;
+    -webkit-transform: rotate(4deg);
+    -ms-transform: rotate(4deg);
+    -o-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }
 
-.slider-wrapper img {
-  position: absolute;
-  max-width: 100%;
-  height: auto;
-  top: 0;
-  left: 0;
-}
+  .slider-wrapper img {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
 
 /**
  * ---[Caption] ---------------------- 
@@ -428,4 +476,71 @@ header {
 
 .control-buttons li.active {
   background: #00c5b9;
+}
+
+
+/* teste botao roupa */
+
+.button {
+ font-size: 100% center;
+ margin-left: 47%;
+ background: #4d6b61;
+ border: 0;
+ border-radius: 50%;
+ box-shadow: inset -0.125rem -0.25rem rgba(0,0,0,0.2),
+ inset 0.125rem 0.25rem rgba(255,255,255,0.2),
+ 0.125rem 0.25rem 0.25rem rgba(0,0,0,0.35);
+ color: #4d6b61;
+ display: inline-block;
+ letter-spacing: 0.38em;
+ text-transform: uppercase;
+ text-decoration: none;
+ text-shadow: 1px 1px 1px rgba(0,0,0,.6), -1px -1px 1px rgba(255,255,255,0.4);
+ height: 8rem;
+ width: 8rem;
+ position: relative;
+ z-index: 1;
+}
+
+.button::before {
+  content: '';
+  border-radius: 50%;
+  box-shadow: inset -0.0625rem -0.125rem rgba(255,255,255,0.2),
+  inset 0.0625rem 0.125rem rgba(0,0,0,0.2);
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  height: 6rem;
+  width: 6rem;
+}
+
+.button::after {
+  content: '';
+  border-radius: 50%;
+  box-shadow: 2.45rem 2.45rem #462227,
+  2.45rem 4.45rem #462227,
+  4.45rem 2.45rem #462227,
+  4.45rem 4.45rem #462227,
+  2.55rem 2.55rem rgba(255,255,255,0.2),
+  2.55rem 4.55rem rgba(255,255,255,0.2),
+  4.55rem 2.55rem rgba(255,255,255,0.2),
+  4.55rem 4.55rem rgba(255,255,255,0.2),
+  2.35rem 2.35rem rgba(0,0,0,0.2),
+  2.35rem 4.35rem rgba(0,0,0,0.2),
+  4.35rem 2.35rem rgba(0,0,0,0.2),
+  4.35rem 4.35rem rgba(0,0,0,0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1rem;
+  width: 1rem;
+}
+
+.button:focus {
+  background: #56796d;
+  outline:0;
+}
+
+.button:active {
+  transform: scale(0.98,0.98);
 }
