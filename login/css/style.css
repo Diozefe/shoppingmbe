@@ -142,3 +142,29 @@ html{
   }
   .direita{    float: right; padding-left: 10px;width: 50%;} .esquerda{ float: left; padding-right: 10px; width: 50%;}
   .divgrade{flex-direction: row;}
+  #btn-back{
+    transition: 1s;
+    margin-top: 5px;
+    margin-left: 5px;
+    float: left;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #015eea;
+    box-shadow: 0 2px 4px 1px rgb(89, 89, 90);
+  }
+  #img-btn-back{
+    cursor: pointer;
+    right: 50px;
+    width: 50px;
+    margin-top: 2px;
+    margin-right: 5px;
+  }
+  #btn-back:hover{
+    transition: 1s;
+    background: #2fbdfb;
+  }
+  #btn-back:active{
+    box-shadow: 0 5px rgb(89,89,90);
+    transform: translateY(15px);
+  }
