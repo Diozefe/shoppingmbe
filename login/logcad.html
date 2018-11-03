@@ -10,62 +10,81 @@
 </head>
 
 <body>
-
-  <div id="app" class="base">
+<header></header>
+<div id="app" class="base">
 	<div v-if="signUp">
 		<div class="aim">
-			<h2>E aí Pessoa ;)</h2>
-			<h6>Digite seus dados pessoais e comece a passear com a gente</h6>
-			<button @click="signUp = !signUp" class="btn ">Cadastrar</button>
+			<h2>Quer explorar mais?</h2>
+			<h6>Preencha seus dados e comece a passear conosco.</h6>
+			<button @click="signUp = !signUp" class="btn ">Cadstrar</button>
 		</div>
 		<div class="formArea">
-			<h2>Logar</h2>
-			
-			<div class="form-group">
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+			<h2>Bem-Vindo ao MyBazz EasyI</h2>
+			<div>
+				<div class="form-group">
+					<input type="email" class="form-control" id="email-log" aria-describedby="emailHelp" placeholder="Seu email">
+				</div>
 			</div>
 			<div class="form-group">
-				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+				<input type="password" class="form-control" id="senha-log" placeholder="Senha">
 			</div>
 
-			<button class="btn">Logar</button>
-			
+			<button class="btn">Entrar</button>
 		</div>
 	</div>
-	
+
 	<div v-else>
 		<div class="aim in">
-			<h2>Bem vindo de volta!</h2>
-			<h6>Para manter contato comigo, faça o login com suas informações pessoais</h6>
-			<button @click="signUp = !signUp" class="btn">Login</button>
+			<h2>Bem-Vindo de volta!</h2>
+			<h6>Está pronto para entrar neste Grande Shopping?</h6>
+			<button @click="signUp = !signUp" class="btn">Entrar</button>
 		</div>
 		<div class="formArea in">
 			<h2>Cadastro</h2>
-		
-			<div class="form-group">
-				<input type="text" class="form-control" id="exampleInputName1" placeholder="Nome">
+			<div class="divgrade">
+				<div class="form-group esquerda">
+					<input type="text" class="form-control" id="nome" placeholder="Primeiro Nome">
+				</div>
+				<div class="form-group direita">
+					<input type="text" class="form-control" id="snome" placeholder="Último Nome">
+				</div>
 			</div>
-			<div class="form-group">
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+			<div class="divgrade">
+				<div class="form-group esquerda">
+					<input type="date" class="form-control" id="datanascimento" placeholder="Data de Nascimento">
+				</div>
+				<div class="form-group direita">
+					<select id="sexo">
+						<option value="0" label="Sexo"></option>
+						<option value="F">Feminino</option>
+						<option value="M">Masculino</option>
+						<option value="O">Outro</option>
+					</select>
+				</div>
 			</div>
-			<div class="form-group">
-				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+			<div class="divgrade">
+				<div class="form-group esquerda">
+					<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Seu email">
+				</div>
+				<div class="form-group direita">
+					<input type="email" class="form-control" id="c-email" aria-describedby="emailHelp" placeholder="Confirme seu email">
+				</div>
 			</div>
-
+			<div class="divgrade">
+				<div class="form-group esquerda">
+					<input type="password" class="form-control" id="senha" placeholder="Senha">
+				</div>
+				<div class="form-group direita">
+					<input type="password" class="form-control" id="c-senha" placeholder="Confirme sua Senha">
+				</div>
+			</div>
 			<button class="btn">Cadastrar</button>
 		</div>
-		
+
 	</div>
 </div>
-  <script src='https://cdn.jsdelivr.net/npm/vue'></script>
-
-  
-
-    <script  src="js/index.js"></script>
-
-
-
-
+<script src='https://cdn.jsdelivr.net/npm/vue'></script>
+<script  src="js/index.js"></script>
 </body>
 
 </html>
