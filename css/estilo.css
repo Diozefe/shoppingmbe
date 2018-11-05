@@ -15,7 +15,7 @@ html, * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-    display: flex;
+    display: block;
 }
 
 *, *:after, *:before {
@@ -402,7 +402,9 @@ font-size: 18px;
 #foto-perfil:hover{
     box-shadow: 0 3px 20px 5px rgb(14, 14, 15);
 }
+ul,ol{
 
+}
 
 
 
