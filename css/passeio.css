@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Audiowide|Orbitron|Press+Start+2P');
 
 /* -------------------------------- 
-Estilo principal
+
+             Passeio
+
 -------------------------------- */
 html{
   font-size: 70%;
@@ -14,12 +16,6 @@ html * {
   box-sizing: border-box;
 }
 
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 body {
   background: #395284;
   font-size: 100%;
@@ -27,33 +23,99 @@ body {
   color: #31353d;
   
 }
-
+header {
+ position: relative;
+ text-align: center;
+ padding-top: 80px;
+ padding-bottom: 0px;
+ background: #ffc554 ;
+ background-size: cover;
+ width: 100%;
+ height: auto;
+ box-shadow: 0px 0px 10px rgba(0,0,0,1);
+}
 a {
   color: #435779;
   text-decoration: none;
 }
-h1#Tour {
-  color: #fff;
-  background-color: #31353d;
-  font-size: 25px;
-  margin-top: 0px;
-  text-align: center;
+
+/*navbar*/
+nav {
+  font-size: 16px;
+  
+  background: #31353d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85px;
+  padding: 10px 35px;
+  box-sizing: border-box;
+  z-index: 999;
 }
 
-/* slide */
-.clearfix:after {
-  content: '';
-  clear: both;
-  display: block;
-  height: 0;
-  width: 0;
+
+
+nav .logo {
+  padding: 8px 0;
+  
+  float: left;
 }
-.slider-wrapper ul {
-  list-style-type: none;
+
+
+nav ul {
+
+  list-style: none;
+  float: right;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
+
+nav ul li{
+  list-style: none;
+}
+
+nav ul li a{
+  line-height: 65px;
+  color: #fff;
+  padding: 12px 30px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+
+nav ul li a:focus{
+  outline: none;
+}
+
+.active{
+ background: #395284;
+ color: #fff;
+ border-radius: 6px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+}
+.active:hover{
+  color: #31353d;
+  border-radius: 6px;
+   transition: color 0.1s linear 0s;
+}
+.color:hover
+{
+    color: #31353d;
+  background: #ffc554;
+  border-radius: 6px;
+   transition: color 0.1s linear 0s;
+    box-shadow: 0px 0px 10px rgba(0,0,0,1);
+}
+
+
+/*----fimheader*/
+
+
 /*-------------------/*
 
-/*Efeito Hover Cool Link*/
+/*Efeito Hover Cool Link
 .cool-link::after {
   content: '';
   display: block;
@@ -66,396 +128,23 @@ h1#Tour {
   width: 100%;
   transition: width 1s;
 }
-
-
-/* -------------------------------- 
-
-Módulos - partes reutilizáveis ​​do nosso design
-
--------------------------------- */
-.cd-container {
-  /* 
-  essa classe é usada para alinhar horizontalmente a galeria de itens */
-  position: relative;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.cd-container::after {
-  /* clearfix */
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.cd-img-replace {
-  /* substituir texto por uma imagem de plano de fundo*/
-  display: inline-block;
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-}
-
-/* -------------------------------- 
-
-xheader 
-
--------------------------------- */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 50px;
-  width: 100%;
-  background: #31353d;
-  text-align: center;
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
-  z-index: 4;
-}
-@media only screen and (min-width: 1200px) {
-  header {
-    height: 80px;
-  }
-}
-
-#logo {
-  padding-top: 5px;
-  /* exclua essa propriedade se você não quiser que seu logotipo seja reduzido em dispositivos móveis*/
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  -o-transform: scale(0.8);
-  transform: scale(0.8);
-}
-@media only screen and (min-width: 1200px) {
-  #logo {
-    padding-top: 17px;
-    position: absolute;
-    /* margem esquerda do logotipo no Dekstop */
-    left: 1.4em;
-    top: 0;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-#cd-hamburger-menu {
-  position: absolute;
-  top: 0;
-  height: 100%;
-}
-#cd-hamburger-menu a{
-  width: 60px;
-  height: 100%;
-}
-
-#cd-hamburger-menu {
-  left: 0;
-}
-#cd-hamburger-menu a {
-  background: #26292f url("../img/cd-hamburger-menu.svg") no-repeat center center;
-}
-@media only screen and (min-width: 1200px) {
-  #cd-hamburger-menu {
-    display: none;
-  }
-}
-
-#main-nav{
-  position: fixed;
-  top: 0;
-  height: 100%;
-  width: 260px;
-  /* altura do cabeçalho */
-  padding-top: 50px;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  z-index: 3;
-}
-@media only screen and (min-width: 768px) {
-  #main-nav{
-    width: 350px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #main-nav{
-    width: 30%;
-    /* a altura do cabeçalho muda*/
-    padding-top: 80px;
-  }
-}
-
-#main-nav {
-  left: -100%;
-  background: #FFF;
-  -webkit-transition: left 0.3s;
-  -moz-transition: left 0.3s;
-  transition: left 0.3s;
-}
-#main-nav.speed-in {
-  left: 0;
-}
-#main-nav ul a {
-  font-size: 18px;
-  font-family: 'Audiowide', cursive;
-  display: block;
-  height: 50px;
-  line-height: 50px;
-  padding: 0 1em;
-
-}
-#main-nav ul .current {
-  box-shadow: inset 3px 0 #435779;
-}
-
-/*navbar*/
-@media only screen and (min-width: 1200px) {
-  #main-nav {
-    /* redefinir o estilo de navegação principal */
-    position: absolute;
-    height: auto;
-    width: auto;
-    left: 0;
-    right: 0;
-    /*left: auto;
-    right: 1em;*/
-    padding-top: 0;
-    top: 0;
-    background: transparent;
-    box-shadow: none;
-    /*altura do cabeçalho */
-    line-height: 80px;
-    z-index: 4;
-  }
-  #main-nav li {
-    display: inline-block;
-    margin-left: 0em;
-  }
-  #main-nav ul a {
-    display: inline-block;
-    height: auto;
-    line-height: 1;
-    padding: 1em 1.4em;
-    border-bottom: none;
-    color: rgba(255, 255, 255, 0.8);
-    border-radius: 0.25em;
-  }
-  #main-nav ul a.current {
-    box-shadow: none;
-    background: #435779;
-    color: #FFF;
-  }
-  .no-touch #main-nav ul a:hover {
-    background: #395284;
-    color: #FFF;
-    transition: 1.5s;
-
-  }
-}
-.no-js #main-nav {
-  position: fixed;
-}
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
-}
-
-/*-------------
-    Background-body
-    ---------------*/
-
-    body .background {
-     background: #970c23 center fixed;
-     display: flex;
-     flex-direction: column;
-     justify-content: space-around;
-     line-height: 1;
-     position: relative;
-     padding-top: 120px;
-     padding-bottom: 60px;
-     text-align: center;
-     width: 100%;
-     height: auto;
-
-   }
-
-   .background::before {
-    background: repeating-linear-gradient(
-      transparent,
-      transparent 2em,
-      rgba(45,25,25,0.3) 2em,
-      rgba(45,25,25,0.3) 2.5em,
-      transparent 2.5em,
-      transparent 4.5em,
-      rgba(45,25,25,0.3) 4.5em,
-      rgba(45,25,25,0.3) 6.5em,
-      transparent 6.5em,
-      transparent 7em,
-      rgba(45,25,25,0.3) 7em,
-      rgba(45,25,25,0.3) 9em
-      );
-    content: '';
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-  }
-  .background::after {
-    background: repeating-linear-gradient( 90deg,
-      transparent,
-      transparent 2em,
-      rgba(45,25,25,0.3) 2em,
-      rgba(45,25,25,0.3) 2.5em,
-      transparent 2.5em,
-      transparent 4.5em,
-      rgba(45,25,25,0.3) 4.5em,
-      rgba(45,25,25,0.3) 6.5em,
-      transparent 6.5em,
-      transparent 7em,
-      rgba(45,25,25,0.3) 7em,
-      rgba(45,25,25,0.3) 9em
-      );
-    content: '';
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-  }
-
-  /* Column container */
-
+*/
 
 /* ---------------------------------------
   Slider 
   ----------------------------------------*/
 
-  .container-slider {
-    width: 900px;
-    margin: 20px auto 0;
-  }
 
-  .slider-wrapper {
-    z-index: 1;
-    position: relative;
-    width: 100%;
-    height: 400px;
-    background: #FFF;
-    border: 5px solid #4b5973;
-    overflow: hidden;
-  }
-
-  .slider-wrapper li {
-    display: none;
-  }
-
-  .slider-wrapper .current-slide {
-    display: block;
-  }
-
-  .slider-shadow {
-    width: 100%;
-    height: 15px;
-    position: relative;
-  }
-
-  .slider-shadow:after, .slider-shadow:before {
-    content: '';
-    position: absolute;
-    background: #171c24;
-    height: 100%;
-    width: 50%;
-    left: 10px;
-    top: -20px;
-    -webkit-transform: rotate(-4deg);
-    -ms-transform: rotate(-4deg);
-    -o-transform: rotate(-4deg);
-    transform: rotate(-4deg);
-    -webkit-box-shadow: 0 0 15px 8px #171c24;
-    box-shadow: 0 0 15px 8px #171c24;
-  }
-
-  .slider-shadow:before {
-    right: 10px;
-    left: auto;
-    -webkit-transform: rotate(4deg);
-    -ms-transform: rotate(4deg);
-    -o-transform: rotate(4deg);
-    transform: rotate(4deg);
-  }
-
-  .slider-wrapper img {
-    position: absolute;
-    max-width: 100%;
-    height: auto;
-    top: 0;
-    left: 0;
-  }
-
-/**
- * ---[Caption] ---------------------- 
- **/
- .slider-wrapper .caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: rgba(0,0,0,0.65);
-  width: 100%;
-  padding: 10px;
-  color: #FFF;
-  -webkit-transform: translateY(100%);
-  -ms-transform: translateY(100%);
-  -o-transform: translateY(100%);
-  transform: translateY(100%);
-  opacity: 0;
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+h1#Tour {
+  color: #fff;
+  background-color: #31353d;
+  font-size: 25px;
+  margin-top: 0px;
+  text-align: center;
 }
-
-.slider-wrapper li:hover .caption {
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
-  transform: translateY(0);
-  opacity: 1;
-}
-
-
-.slider-wrapper h2 {
-  font-family: "Arial";
-  color: #00c5b9;
-  font-size: 1.6em;
-  font-weight: 400;
-  margin-bottom: 6px;
-}
-
-.slider-wrapper p {
-  font-family: "Arial";
-  font-size: 1.2em;
-  font-weight: 300;
-  line-height: 1.4em;
-}
-
-/**
- * ---[Botones-Control] ---------------------- 
- **/
+/*
+[Botones-Control] 
+ */
  .control-buttons {
   margin-top: 15px;
   text-align: center;

@@ -9,297 +9,333 @@
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 	
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" type="text/css" href="css/passeio.css"> <!-- Gem style -->
+	<link rel="stylesheet" href="css/passeio.css"> <!-- Gem style -->
 	<link rel="stylesheet" href="css/produto.css"> <!-- Resource style -->
-	<script src="js/modern.js"></script> <!-- Modernizr -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<link rel="stylesheet" type="text/css" href="css/slide.css">
 
 	<title>MyBazz Easy</title>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="js/main.js"></script> <!-- Gem jQuery -->
-
-
-	<script src="js/modernizr.js"></script> <!-- Modernizr -->
-	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
-
-	<script  src="js/slide.js"></script>
 	
 </head>
-<body class="foo">
-
-	<div id="navegacao" class="container">
-		<header>
-			<div id="logo"><a href="#"><img src="img/loja.png" alt="Homepag"></a></div>
-
-
-			<div id="cd-hamburger-menu"><a class="cd-img-replace" href="#0">Menu</a></div>
-		</header>
-
-		<nav id="main-nav">
-			<ul>
-				<li><a href="index.html" class="cool-link"><i class="fab fa-fort-awesome"></i> Home</a></li>
-				<li><a href="lojas.html" class="cool-link"><i class="fas fa-store"></i> Lojas</a></li>
-				<li><a href="#" class="cool-link"><i class="fas fa-shoe-prints"></i> Passeio</a></li>
-				<li><a href="#" class="cool-link"><i class="fas fa-handshake"></i> Contato</a></li>
-				<li><a href="login/logcad.html" class="cool-link">Cadastro|Entrar</a></li>
-			</ul>
-
-		</nav>
-
-		<!--- Carrosel SBT --->
-		<div id="carrosel" class="background">
-			<div id="slider" class="container-slider">
-				<ul class="slider-wrapper">
-					<li class="current-slide">
-						<img src="img/1.jpg" title="" alt="">
-
-						<div class="caption">
-							<h2 class="slider-title">Slide one</h2>
-							<p>Temos aqui uma imagem que representa algo na vida.</p>
-						</div>
-					</li>
-
-					<li>
-						<img src="img/2.jpg" title="" alt="">
-
-						<div class="caption">
-							<h2 class="slider-title">Slide 2</h2>
-							<p>Outro Slide que representa algo!</p>
-						</div>
-					</li>
-
-					<li>
-						<img src="img/.jpg" title="" alt="">
-
-						<div class="caption">
-							<h2 class="slider-title">Slide 3</h2>
-							<p>A incrivel nazare confusa!</p>
-						</div>
-					</li>
-
-					<li>
-						<img src="img/4.jpg" title="" alt="">
-
-						<div class="caption">
-							<h2 class="slider-title">Slide 4</h2>
-							<p>Carrosel</p>
-						</div>
-					</li>
-				</ul>
-				<!-- Sombras -->
-				<div class="slider-shadow"></div>
-
-				<!-- Controles de Navegacion -->
-				<ul id="control-buttons" class="control-buttons"></ul>
+<body>
+	<header>
+		<div id="navbar">
+			<nav>
+				<div class="logo">
+					<img src="img/loja.png" title="MyBazz"></div>
+					<ul>
+						<li><a href="index.html" class="color"><i class="fab fa-fort-awesome"></i> Home</a></li>
+						<li><a href="Lojas.html" class="color"><i class="fas fa-store"></i> Lojas</a></li>
+						<li><a href="#" class="color"><i class="fas fa-shoe-prints"></i> Passeio</a></li>
+						<li><a href="#" class="color"><i class="fas fa-handshake"></i> Contato</a></li>
+						<li><a href="login/logcad.html" class="active"><i class="fas fa-sign-in-alt"></i> Log|Cad</a></li>
+					</ul>
+				</nav>
 			</div>
+			<!--- Carrosel SBT --->
+			<main class="main-content">
+				<section class="slideshow">
+					<div class="slideshow-inner">
+						<div class="slides">
+							<div class="slide is-active ">
+								<div class="slide-content">
+									<div class="caption">
+										<div class="title">Slide title 1</div>
+										<div class="text">
+											<p>Slide description 1</p>
+										</div> 
+									</div>
+								</div>
+								<div class="image-container"> 
+									<img src="img/1.jpg" alt="" class="image" />
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slide-content">
+									<div class="caption">
+										<div class="title">Slide title 2</div>
+										<div class="text">
+											<p>Slide description 2</p>
+										</div> 
+									</div>
+								</div>
+								<div class="image-container">
+									<img src="img/2.jpg" alt="" class="image" />
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slide-content">
+									<div class="caption">
+										<div class="title">Slide title 3</div>
+										<div class="text">
+											<p>Slide description 3</p>
+										</div> 
+									</div>
+								</div>
+								<div class="image-container">
+									<img src="img/1.jpg" alt="" class="image" />
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slide-content">
+									<div class="caption">
+										<div class="title">Slide title 4</div>
+										<div class="text">
+											<p>Slide description 4</p>
+										</div> 
+									</div>
+								</div>
+								<div class="image-container"> 
+									<img src="img/2.jpg" alt="" class="image" />
+								</div>
+							</div>
+						</div>
+						<div class="pagination">
+							<div class="item is-active"> 
+								<span class="icon">1</span>
+							</div>
+							<div class="item">
+								<span class="icon">2</span>
+							</div>
+							<div class="item">
+								<span class="icon">3</span>
+							</div>
+							<div class="item">
+								<span class="icon">4</span>
+							</div>
+						</div>
+						<div class="arrows">
+							<div class="arrow prev">
+								<span class="svg svg-arrow-left">
+									<svg version="1.1" id="svg4-Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="26px" viewBox="0 0 14 26" enable-background="new 0 0 14 26" xml:space="preserve"> <path d="M13,26c-0.256,0-0.512-0.098-0.707-0.293l-12-12c-0.391-0.391-0.391-1.023,0-1.414l12-12c0.391-0.391,1.023-0.391,1.414,0s0.391,1.023,0,1.414L2.414,13l11.293,11.293c0.391,0.391,0.391,1.023,0,1.414C13.512,25.902,13.256,26,13,26z"/> </svg>
+									<span class="alt sr-only"></span>
+								</span>
+							</div>
+							<div class="arrow next">
+								<span class="svg svg-arrow-right">
+									<svg version="1.1" id="svg5-Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="26px" viewBox="0 0 14 26" enable-background="new 0 0 14 26" xml:space="preserve"> <path d="M1,0c0.256,0,0.512,0.098,0.707,0.293l12,12c0.391,0.391,0.391,1.023,0,1.414l-12,12c-0.391,0.391-1.023,0.391-1.414,0s-0.391-1.023,0-1.414L11.586,13L0.293,1.707c-0.391-0.391-0.391-1.023,0-1.414C0.488,0.098,0.744,0,1,0z"/> </svg>
+									<span class="alt sr-only"></span>
+								</span>
+							</div>
+						</div>
+					</div> 
+				</section>
+			</main>
+
+		</header>
+		<button class="button"> PASSEIO</button>
+
+		<div class="Interface">
+			<ul class="cd-gallery">
+				<li>
+					<a href="#">
+						<ul class="cd-item-wrapper">
+							<li class="selected">
+								<img src="img/ugmonk-tshirt-1.jpg" alt="Preview image">
+							</li>
+
+							<li class="move-right" data-sale="true" data-price="$22">
+								<img src="img/ugmonk-tshirt-2.jpg" alt="Preview image">
+							</li>
+
+							<li>
+								<img src="img/ugmonk-tshirt-3.jpg" alt="Preview image">
+							</li>
+						</ul> <!-- cd-item-wrapper -->
+					</a>
+
+					<div class="cd-item-info">
+						<b><a id="prod" href="#">Produto | Loja</a></b>
+
+						<em class="cd-price">$26</em>
+					</div> <!-- cd-item-info -->
+				</li>
+
+				<li>
+					<a href="#">
+						<ul class="cd-item-wrapper">
+							<li class="selected">
+								<img src="img/ugmonk-cap-1.jpg" alt="Preview image">
+							</li>
+
+							<li class="move-right">
+								<img src="img/ugmonk-cap-2.jpg" alt="Preview image">
+							</li>
+
+							<li>
+								<img src="img/ugmonk-cap-3.jpg" alt="Preview image">
+							</li>
+						</ul> <!-- cd-item-wrapper -->
+					</a>
+
+					<div class="cd-item-info">
+						<b><a href="#0">Produto | Loja</a></b>
+
+						<em class="cd-price">$42</em>
+					</div> <!-- cd-item-info -->
+				</li>
+
+				<li>
+					<a href="#">
+						<ul class="cd-item-wrapper">
+							<li class="selected">
+								<img src="img/ugmonk-bag-1.jpg" alt="Preview image">
+							</li>
+
+							<li class="move-right">
+								<img src="img/ugmonk-bag-2.jpg" alt="Preview image">
+							</li>
+
+							<li>
+								<img src="img/ugmonk-bag-3.jpg" alt="Preview image">
+							</li>
+						</ul> <!-- cd-item-wrapper -->
+					</a>
+
+					<div class="cd-item-info">
+						<b><a href="#0">Produto | Loja</a></b>
+
+						<em class="cd-price">$235</em>
+					</div> <!-- cd-item-info -->
+				</li>
+
+				<li>
+					<a href="#">
+						<ul class="cd-item-wrapper">
+							<li class="selected">
+								<img src="img/ugmonk-tshirt-1.jpg" alt="Preview image">
+							</li>
+
+							<li class="move-right" data-sale="true" data-price="$22">
+								<img src="img/ugmonk-tshirt-2.jpg" alt="Preview image">
+							</li>
+
+							<li>
+								<img src="img/ugmonk-tshirt-3.jpg" alt="Preview image">
+							</li>
+						</ul> <!-- cd-item-wrapper -->
+					</a>
+
+					<div class="cd-item-info">
+						<b><a href="#0">Produto | Loja</a></b>
+
+						<em class="cd-price">$26</em>
+					</div> <!-- cd-item-info -->
+				</li>
+
+				<li>
+					<a href="#">
+						<ul class="cd-item-wrapper">
+							<li class="selected">
+								<img src="img/ugmonk-cap-1.jpg" alt="Preview image">
+							</li>
+
+							<li class="move-right">
+								<img src="img/ugmonk-cap-2.jpg" alt="Preview image">
+							</li>
+
+							<li>
+								<img src="img/ugmonk-cap-3.jpg" alt="Preview image">
+							</li>
+						</ul> <!-- cd-item-wrapper -->
+					</a>
+
+					<div class="cd-item-info">
+						<b><a href="#0">Produto | Loja</a></b>
+
+						<em class="cd-price">$42</em>
+					</div> <!-- cd-item-info -->
+				</li>
+
+				<li>
+					<a href="#">
+						<ul class="cd-item-wrapper">
+							<li class="selected">
+								<img src="img/ugmonk-bag-1.jpg" alt="Preview image">
+							</li>
+
+							<li class="move-right">
+								<img src="img/ugmonk-bag-2.jpg" alt="Preview image">
+							</li>
+
+							<li>
+								<img src="img/ugmonk-bag-3.jpg" alt="Preview image">
+							</li>
+						</ul> <!-- cd-item-wrapper -->
+					</a>
+
+					<div class="cd-item-info">
+						<b><a href="#0">Produto | Loja</a></b>
+
+						<em class="cd-price">$235</em>
+					</div> <!-- cd-item-info -->
+				</li>
+				<li>
+					<a href="#">
+						<ul class="cd-item-wrapper">
+							<li class="selected">
+								<img src="img/ugmonk-cap-1.jpg" alt="Preview image">
+							</li>
+
+							<li class="move-right">
+								<img src="img/ugmonk-cap-2.jpg" alt="Preview image">
+							</li>
+
+							<li>
+								<img src="img/ugmonk-cap-3.jpg" alt="Preview image">
+							</li>
+						</ul> <!-- cd-item-wrapper -->
+					</a>
+
+					<div class="cd-item-info">
+						<b><a href="#0">Produto | Loja</a></b>
+
+						<em class="cd-price">$42</em>
+					</div> <!-- cd-item-info -->
+				</li>
+
+				<li>
+					<a href="#">
+						<ul class="cd-item-wrapper">
+							<li class="selected">
+								<img src="img/ugmonk-bag-1.jpg" alt="Preview image">
+							</li>
+
+							<li class="move-right">
+								<img src="img/ugmonk-bag-2.jpg" alt="Preview image">
+							</li>
+
+							<li>
+								<img src="img/ugmonk-bag-3.jpg" alt="Preview image">
+							</li>
+						</ul> <!-- cd-item-wrapper -->
+					</a>
+
+					<div class="cd-item-info">
+						<b><a href="#0">Produto | Loja</a></b>
+
+						<em class="cd-price">$235</em>
+					</div> <!-- cd-item-info -->
+				</li>
+			</ul> <!-- cd-gallery -->
 		</div>
-	</div>
-	<button class="button"> PASSEIO</button>
-
-	<div class="row">
-		<ul class="cd-gallery">
-			<li>
-				<a href="#">
-					<ul class="cd-item-wrapper">
-						<li class="selected">
-							<img src="img/ugmonk-tshirt-1.jpg" alt="Preview image">
-						</li>
-
-						<li class="move-right" data-sale="true" data-price="$22">
-							<img src="img/ugmonk-tshirt-2.jpg" alt="Preview image">
-						</li>
-
-						<li>
-							<img src="img/ugmonk-tshirt-3.jpg" alt="Preview image">
-						</li>
-					</ul> <!-- cd-item-wrapper -->
-				</a>
-
-				<div class="cd-item-info">
-					<b><a href="#">Produto | Loja</a></b>
-
-					<em class="cd-price">$26</em>
-				</div> <!-- cd-item-info -->
-			</li>
-
-			<li>
-				<a href="#">
-					<ul class="cd-item-wrapper">
-						<li class="selected">
-							<img src="img/ugmonk-cap-1.jpg" alt="Preview image">
-						</li>
-
-						<li class="move-right">
-							<img src="img/ugmonk-cap-2.jpg" alt="Preview image">
-						</li>
-
-						<li>
-							<img src="img/ugmonk-cap-3.jpg" alt="Preview image">
-						</li>
-					</ul> <!-- cd-item-wrapper -->
-				</a>
-
-				<div class="cd-item-info">
-					<b><a href="#0">Produto | Loja</a></b>
-
-					<em class="cd-price">$42</em>
-				</div> <!-- cd-item-info -->
-			</li>
-
-			<li>
-				<a href="#">
-					<ul class="cd-item-wrapper">
-						<li class="selected">
-							<img src="img/ugmonk-bag-1.jpg" alt="Preview image">
-						</li>
-
-						<li class="move-right">
-							<img src="img/ugmonk-bag-2.jpg" alt="Preview image">
-						</li>
-
-						<li>
-							<img src="img/ugmonk-bag-3.jpg" alt="Preview image">
-						</li>
-					</ul> <!-- cd-item-wrapper -->
-				</a>
-
-				<div class="cd-item-info">
-					<b><a href="#0">Produto | Loja</a></b>
-
-					<em class="cd-price">$235</em>
-				</div> <!-- cd-item-info -->
-			</li>
-
-			<li>
-				<a href="#">
-					<ul class="cd-item-wrapper">
-						<li class="selected">
-							<img src="img/ugmonk-tshirt-1.jpg" alt="Preview image">
-						</li>
-
-						<li class="move-right" data-sale="true" data-price="$22">
-							<img src="img/ugmonk-tshirt-2.jpg" alt="Preview image">
-						</li>
-
-						<li>
-							<img src="img/ugmonk-tshirt-3.jpg" alt="Preview image">
-						</li>
-					</ul> <!-- cd-item-wrapper -->
-				</a>
-
-				<div class="cd-item-info">
-					<b><a href="#0">Produto | Loja</a></b>
-
-					<em class="cd-price">$26</em>
-				</div> <!-- cd-item-info -->
-			</li>
-
-			<li>
-				<a href="#">
-					<ul class="cd-item-wrapper">
-						<li class="selected">
-							<img src="img/ugmonk-cap-1.jpg" alt="Preview image">
-						</li>
-
-						<li class="move-right">
-							<img src="img/ugmonk-cap-2.jpg" alt="Preview image">
-						</li>
-
-						<li>
-							<img src="img/ugmonk-cap-3.jpg" alt="Preview image">
-						</li>
-					</ul> <!-- cd-item-wrapper -->
-				</a>
-
-				<div class="cd-item-info">
-					<b><a href="#0">Produto | Loja</a></b>
-
-					<em class="cd-price">$42</em>
-				</div> <!-- cd-item-info -->
-			</li>
-
-			<li>
-				<a href="#">
-					<ul class="cd-item-wrapper">
-						<li class="selected">
-							<img src="img/ugmonk-bag-1.jpg" alt="Preview image">
-						</li>
-
-						<li class="move-right">
-							<img src="img/ugmonk-bag-2.jpg" alt="Preview image">
-						</li>
-
-						<li>
-							<img src="img/ugmonk-bag-3.jpg" alt="Preview image">
-						</li>
-					</ul> <!-- cd-item-wrapper -->
-				</a>
-
-				<div class="cd-item-info">
-					<b><a href="#0">Produto | Loja</a></b>
-
-					<em class="cd-price">$235</em>
-				</div> <!-- cd-item-info -->
-			</li>
-			<li>
-				<a href="#">
-					<ul class="cd-item-wrapper">
-						<li class="selected">
-							<img src="img/ugmonk-cap-1.jpg" alt="Preview image">
-						</li>
-
-						<li class="move-right">
-							<img src="img/ugmonk-cap-2.jpg" alt="Preview image">
-						</li>
-
-						<li>
-							<img src="img/ugmonk-cap-3.jpg" alt="Preview image">
-						</li>
-					</ul> <!-- cd-item-wrapper -->
-				</a>
-
-				<div class="cd-item-info">
-					<b><a href="#0">Produto | Loja</a></b>
-
-					<em class="cd-price">$42</em>
-				</div> <!-- cd-item-info -->
-			</li>
-
-			<li>
-				<a href="#">
-					<ul class="cd-item-wrapper">
-						<li class="selected">
-							<img src="img/ugmonk-bag-1.jpg" alt="Preview image">
-						</li>
-
-						<li class="move-right">
-							<img src="img/ugmonk-bag-2.jpg" alt="Preview image">
-						</li>
-
-						<li>
-							<img src="img/ugmonk-bag-3.jpg" alt="Preview image">
-						</li>
-					</ul> <!-- cd-item-wrapper -->
-				</a>
-
-				<div class="cd-item-info">
-					<b><a href="#0">Produto | Loja</a></b>
-
-					<em class="cd-price">$235</em>
-				</div> <!-- cd-item-info -->
-			</li>
-		</ul> <!-- cd-gallery -->
-	</div>
-	<!-- Footer -->
+		<!-- Footer -->
 		<footer id="rodape" class="footer"> 
 			<p>Rodapé/Contato</p> 
 		</footer>
-</div>
+	</div>
 
-<script src="js/jquery-2.1.1.js"></script>
-<script src="js/jquery.mobile.min.js"></script>
+	<script src="js/jquery-2.1.1.js"></script>
+	<script src="js/jquery.mobile.min.js"></script>
 
-<script src="js/main_produto.js"></script> <!-- Resource jQuery -->
+	<script src="js/main_produto.js"></script> <!-- Resource jQuery -->
+
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+
+	<script  src="js/slide.js"></script>
 
 
 

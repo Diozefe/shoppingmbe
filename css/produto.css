@@ -1,8 +1,9 @@
 /* -------------------------------- 
 
-Main Components 
+            Produto 
 
 -------------------------------- */
+
 .cd-gallery {
   width: 100%;
   max-width: 1048px;
@@ -334,7 +335,7 @@ Main Components
 }
 
 /*row-interface*/
-.row {  
+.Interface {  
     background: #fff;
     color: #aaa;
     width: 1200px;

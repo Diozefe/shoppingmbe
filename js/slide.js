@@ -1,105 +1,209 @@
-/**
- * @Titulo: Slider Responsivo
- * @Autor: Creaticode
- * @URL: http://creaticode.com 
- */
-$(function() {
-	/** -----------------------------------------
-	 * Modulo del Slider 
-	 -------------------------------------------*/
-	 var SliderModule = (function() {
-	 	var pb = {};
-	 	pb.el = $('#slider');
-	 	pb.items = {
-	 		panels: pb.el.find('.slider-wrapper > li'),
-	 	}
+var slideshowDuration = 4000;
+var slideshow=$('.main-content .slideshow');
 
-	 	// Interval del Slider
-	 	var SliderInterval,
-	 		currentSlider = 0,
-	 		nextSlider = 1,
-	 		lengthSlider = pb.items.panels.length;
+function slideshowSwitch(slideshow,index,auto){
+  if(slideshow.data('wait')) return;
 
-	 	// Constructor del Slider
-	 	pb.init = function(settings) {
-	 		this.settings = settings || {duration: 8000};
-	 		var items = this.items,
-	 			lengthPanels = items.panels.length,
-	 			output = '';
+  var slides = slideshow.find('.slide');
+  var pages = slideshow.find('.pagination');
+  var activeSlide = slides.filter('.is-active');
+  var activeSlideImage = activeSlide.find('.image-container');
+  var newSlide = slides.eq(index);
+  var newSlideImage = newSlide.find('.image-container');
+  var newSlideContent = newSlide.find('.slide-content');
+  var newSlideElements=newSlide.find('.caption > *');
+  if(newSlide.is(activeSlide))return;
 
-	 		// Insertamos nuestros botones
-	 		for(var i = 0; i < lengthPanels; i++) {
-	 			if(i == 0) {
-	 				output += '<li class="active"></li>';
-	 			} else {
-	 				output += '<li></li>';
-	 			}
-	 		}
+  newSlide.addClass('is-new');
+  var timeout=slideshow.data('timeout');
+  clearTimeout(timeout);
+  slideshow.data('wait',true);
+  var transition=slideshow.attr('data-transition');
+  if(transition=='fade'){
+    newSlide.css({
+      display:'block',
+      zIndex:2
+    });
+    newSlideImage.css({
+      opacity:0
+    });
 
-	 		$('#control-buttons').html(output);
+    TweenMax.to(newSlideImage,1,{
+      alpha:1,
+      onComplete:function(){
+        newSlide.addClass('is-active').removeClass('is-new');
+        activeSlide.removeClass('is-active');
+        newSlide.css({display:'',zIndex:''});
+        newSlideImage.css({opacity:''});
+        slideshow.find('.pagination').trigger('check');
+        slideshow.data('wait',false);
+        if(auto){
+          timeout=setTimeout(function(){
+            slideshowNext(slideshow,false,true);
+          },slideshowDuration);
+          slideshow.data('timeout',timeout);}}});
+  } else {
+    if(newSlide.index()>activeSlide.index()){
+      var newSlideRight=0;
+      var newSlideLeft='auto';
+      var newSlideImageRight=-slideshow.width()/8;
+      var newSlideImageLeft='auto';
+      var newSlideImageToRight=0;
+      var newSlideImageToLeft='auto';
+      var newSlideContentLeft='auto';
+      var newSlideContentRight=0;
+      var activeSlideImageLeft=-slideshow.width()/4;
+    } else {
+      var newSlideRight='';
+      var newSlideLeft=0;
+      var newSlideImageRight='auto';
+      var newSlideImageLeft=-slideshow.width()/8;
+      var newSlideImageToRight='';
+      var newSlideImageToLeft=0;
+      var newSlideContentLeft=0;
+      var newSlideContentRight='auto';
+      var activeSlideImageLeft=slideshow.width()/4;
+    }
 
-	 		// Activamos nuestro Slider
-	 		activateSlider();
-	 		// Eventos para los controles
-	 		$('#control-buttons').on('click', 'li', function(e) {
-	 			var $this = $(this);
-	 			if(!(currentSlider === $this.index())) {
-	 				changePanel($this.index());
-	 			}
-	 		});
+    newSlide.css({
+      display:'block',
+      width:0,
+      right:newSlideRight,
+      left:newSlideLeft
+      ,zIndex:2
+    });
 
-	 	}
+    newSlideImage.css({
+      width:slideshow.width(),
+      right:newSlideImageRight,
+      left:newSlideImageLeft
+    });
 
-	 	// Funcion para activar el Slider
-	 	var activateSlider = function() {
-	 		SliderInterval = setInterval(pb.startSlider, pb.settings.duration);
-	 	}
+    newSlideContent.css({
+      width:slideshow.width(),
+      left:newSlideContentLeft,
+      right:newSlideContentRight
+    });
 
-	 	// Funcion para la Animacion
-	 	pb.startSlider = function() {
-	 		var items = pb.items,
-	 			controls = $('#control-buttons li');
-	 		// Comprobamos si es el ultimo panel para reiniciar el conteo
-	 		if(nextSlider >= lengthSlider) {
-	 			nextSlider = 0;
-	 			currentSlider = lengthSlider-1;
-	 		}
+    activeSlideImage.css({
+      left:0
+    });
 
-	 		controls.removeClass('active').eq(nextSlider).addClass('active');
-	 		items.panels.eq(currentSlider).fadeOut('slow');
-	 		items.panels.eq(nextSlider).fadeIn('slow');
+    TweenMax.set(newSlideElements,{y:20,force3D:true});
+    TweenMax.to(activeSlideImage,1,{
+      left:activeSlideImageLeft,
+      ease:Power3.easeInOut
+    });
 
-	 		// Actualizamos los datos del slider
-	 		currentSlider = nextSlider;
-	 		nextSlider += 1;
-	 	}
+    TweenMax.to(newSlide,1,{
+      width:slideshow.width(),
+      ease:Power3.easeInOut
+    });
 
-	 	// Funcion para Cambiar de Panel con Los Controles
-	 	var changePanel = function(id) {
-	 		clearInterval(SliderInterval);
-	 		var items = pb.items,
-	 			controls = $('#control-buttons li');
-	 		// Comprobamos si el ID esta disponible entre los paneles
-	 		if(id >= lengthSlider) {
-	 			id = 0;
-	 		} else if(id < 0) {
-	 			id = lengthSlider-1;
-	 		}
+    TweenMax.to(newSlideImage,1,{
+      right:newSlideImageToRight,
+      left:newSlideImageToLeft,
+      ease:Power3.easeInOut
+    });
 
-	 		controls.removeClass('active').eq(id).addClass('active');
-	 		items.panels.eq(currentSlider).fadeOut('slow');
-	 		items.panels.eq(id).fadeIn('slow');
+    TweenMax.staggerFromTo(newSlideElements,0.8,{alpha:0,y:60},{alpha:1,y:0,ease:Power3.easeOut,force3D:true,delay:0.6},0.1,function(){
+      newSlide.addClass('is-active').removeClass('is-new');
+      activeSlide.removeClass('is-active');
+      newSlide.css({
+        display:'',
+        width:'',
+        left:'',
+        zIndex:''
+      });
 
-	 		// Volvemos a actualizar los datos del slider
-	 		currentSlider = id;
-	 		nextSlider = id+1;
-	 		// Reactivamos nuestro slider
-	 		activateSlider();
-	 	}
+      newSlideImage.css({
+        width:'',
+        right:'',
+        left:''
+      });
 
-		return pb;
-	 }());
+      newSlideContent.css({
+        width:'',
+        left:''
+      });
 
-	 SliderModule.init({duration: 4000});
+      newSlideElements.css({
+        opacity:'',
+        transform:''
+      });
 
+      activeSlideImage.css({
+        left:''
+      });
+
+      slideshow.find('.pagination').trigger('check');
+      slideshow.data('wait',false);
+      if(auto){
+        timeout=setTimeout(function(){
+          slideshowNext(slideshow,false,true);
+        },slideshowDuration);
+        slideshow.data('timeout',timeout);
+      }
+    });
+  }
+}
+
+function slideshowNext(slideshow,previous,auto){
+  var slides=slideshow.find('.slide');
+  var activeSlide=slides.filter('.is-active');
+  var newSlide=null;
+  if(previous){
+    newSlide=activeSlide.prev('.slide');
+    if(newSlide.length === 0) {
+      newSlide=slides.last();
+    }
+  } else {
+    newSlide=activeSlide.next('.slide');
+    if(newSlide.length==0)
+      newSlide=slides.filter('.slide').first();
+  }
+
+  slideshowSwitch(slideshow,newSlide.index(),auto);
+}
+
+function homeSlideshowParallax(){
+  var scrollTop=$(window).scrollTop();
+  if(scrollTop>windowHeight) return;
+  var inner=slideshow.find('.slideshow-inner');
+  var newHeight=windowHeight-(scrollTop/2);
+  var newTop=scrollTop*0.8;
+
+  inner.css({
+    transform:'translateY('+newTop+'px)',height:newHeight
+  });
+}
+
+$(document).ready(function() {
+ $('.slide').addClass('is-loaded');
+
+ $('.slideshow .arrows .arrow').on('click',function(){
+  slideshowNext($(this).closest('.slideshow'),$(this).hasClass('prev'));
 });
+
+ $('.slideshow .pagination .item').on('click',function(){
+  slideshowSwitch($(this).closest('.slideshow'),$(this).index());
+});
+
+ $('.slideshow .pagination').on('check',function(){
+  var slideshow=$(this).closest('.slideshow');
+  var pages=$(this).find('.item');
+  var index=slideshow.find('.slides .is-active').index();
+  pages.removeClass('is-active');
+  pages.eq(index).addClass('is-active');
+});
+
+var timeout=setTimeout(function(){
+  slideshowNext(slideshow,false,true);
+},slideshowDuration);
+
+slideshow.data('timeout',timeout);
+});
+
+if($('.main-content .slideshow').length > 1) {
+  $(window).on('scroll',homeSlideshowParallax);
+}
