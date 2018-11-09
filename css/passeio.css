@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Audiowide|Orbitron|Press+Start+2P');
 
 /* -------------------------------- 
-
              Passeio
-
 -------------------------------- */
 html{
   font-size: 70%;
@@ -17,7 +15,7 @@ html * {
 }
 
 body {
-  background: #395284;
+  background-color: #395284;
   font-size: 100%;
   font-family: "Audiowide";
   color: #31353d;
@@ -109,31 +107,7 @@ nav ul li a:focus{
     box-shadow: 0px 0px 10px rgba(0,0,0,1);
 }
 
-
 /*----fimheader*/
-
-
-/*-------------------/*
-
-/*Efeito Hover Cool Link
-.cool-link::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #fff;
-  transition: width 1s;
-}
-.cool-link:hover::after {
-  width: 100%;
-  transition: width 1s;
-}
-*/
-
-/* ---------------------------------------
-  Slider 
-  ----------------------------------------*/
-
 
 h1#Tour {
   color: #fff;
@@ -166,7 +140,6 @@ h1#Tour {
 .control-buttons li.active {
   background: #00c5b9;
 }
-
 
 /* teste botao roupa */
 
@@ -232,4 +205,138 @@ h1#Tour {
 
 .button:active {
   transform: scale(0.98,0.98);
+}
+
+/*--------------------*/
+
+.Interface {  
+  background: #fff;
+  color: #aaa;
+  width: 1200px;
+  max-width: 90%;
+  margin: 5.5% auto;
+  margin-top: -1%;
+  padding: 4%;
+  border-radius: 6px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+}
+
+/* produtos*/
+
+.post-slide{
+    margin: 0 10px;
+  }
+  .post-slide .post-info{
+    padding: 5px 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .post-slide .post-info li{
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  .post-slide .post-info li i{
+    margin-right: 8px;
+  }
+
+  .post-slide .post-info li a{
+    font-size: 11px;
+    font-weight: bold;
+    color: #7e828a;
+    text-transform: uppercase;
+  }
+
+  .post-slide .post-info li a:hover{
+    color: deepskyblue;
+    text-decoration: none;
+  }
+
+  .post-slide .post-img{
+    position: relative;
+  }
+
+  .post-slide .post-img:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: rgba(0,0,0,0.6);
+    transition: opacity 0.40s linear 0s;
+  }
+
+  .post-slide:hover .post-img:before{
+    opacity: 1;
+  }
+
+  .post-slide .post-img img{
+    width: 100%;
+    height: auto;
+  }
+
+  .post-slide .read{
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    font-size: 14px;
+    color: white;
+    text-transform: capitalize;
+    opacity: 0;
+    transition: all 0.40s linear 0s;
+
+  }
+
+  .post-slide .post-content{
+    padding: 40px 0;
+    position: relative;
+  }
+
+  .post-slide .post-author{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: absolute;
+    top: -45px;
+    right: 10px;
+    overflow: hidden;
+    border: 4px solid white;
+  }
+
+  .post-slide .post-author img{
+    width: 100%;
+    height: auto;
+  }
+
+  .post-slide .post-title{
+    font-size: 14px;
+    font-weight: bold;
+    color: deepskyblue;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    transition: all 0.30s linear 0s;
+  }
+
+  .post-slide .post-description{
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+
+
+.footer {
+  border-radius: 2px;
+  font-size: 20px;
+  color: white;
+  background: #31353d;
+  padding: 90px;
+  text-align: center;
+   box-shadow: 0px 0px 10px rgba(0,0,0,1);
+
 }
