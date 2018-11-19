@@ -1,209 +1,50 @@
-var slideshowDuration = 4000;
-var slideshow=$('.main-content .slideshow');
+jQuery(document).ready(function ($) {
 
-function slideshowSwitch(slideshow,index,auto){
-  if(slideshow.data('wait')) return;
+            var options = {
+                $FillMode: 2,                                       //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actual size, 5 contain for large image, actual size for small image, default value is 0
+                $AutoPlay: 1,                                       //[Optional] Auto play or not, to enable slideshow, this option must be set to greater than 0. Default value is 0. 0: no auto play, 1: continuously, 2: stop at last slide, 4: stop on click, 8: stop on user navigation (by arrow/bullet/thumbnail/drag/arrow key navigation)
+                $Idle: 4000,                                        //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $PauseOnHover: 1,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
 
-  var slides = slideshow.find('.slide');
-  var pages = slideshow.find('.pagination');
-  var activeSlide = slides.filter('.is-active');
-  var activeSlideImage = activeSlide.find('.image-container');
-  var newSlide = slides.eq(index);
-  var newSlideImage = newSlide.find('.image-container');
-  var newSlideContent = newSlide.find('.slide-content');
-  var newSlideElements=newSlide.find('.caption > *');
-  if(newSlide.is(activeSlide))return;
+                $ArrowKeyNavigation: 1,                         //[Optional] Steps to go for each navigation request by pressing arrow key, default value is 1.
+                $SlideEasing: $Jease$.$OutQuint,                    //[Optional] Specifies easing for right to left animation, default value is $Jease$.$OutQuad
+                $SlideDuration: 800,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide, default value is 20
+                //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+                //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+                $SlideSpacing: 0,                           //[Optional] Space between each slide in pixels, default value is 0
+                $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+                $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
+                $DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $Cols is greater than 1, or parking position is not 0)
 
-  newSlide.addClass('is-new');
-  var timeout=slideshow.data('timeout');
-  clearTimeout(timeout);
-  slideshow.data('wait',true);
-  var transition=slideshow.attr('data-transition');
-  if(transition=='fade'){
-    newSlide.css({
-      display:'block',
-      zIndex:2
-    });
-    newSlideImage.css({
-      opacity:0
-    });
+                $BulletNavigatorOptions: {                          //[Optional] Options to specify and enable navigator or not
+                    $Class: $JssorBulletNavigator$,                 //[Required] Class to create navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $SpacingX: 8,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
+                    $Orientation: 1                                //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+                },
 
-    TweenMax.to(newSlideImage,1,{
-      alpha:1,
-      onComplete:function(){
-        newSlide.addClass('is-active').removeClass('is-new');
-        activeSlide.removeClass('is-active');
-        newSlide.css({display:'',zIndex:''});
-        newSlideImage.css({opacity:''});
-        slideshow.find('.pagination').trigger('check');
-        slideshow.data('wait',false);
-        if(auto){
-          timeout=setTimeout(function(){
-            slideshowNext(slideshow,false,true);
-          },slideshowDuration);
-          slideshow.data('timeout',timeout);}}});
-  } else {
-    if(newSlide.index()>activeSlide.index()){
-      var newSlideRight=0;
-      var newSlideLeft='auto';
-      var newSlideImageRight=-slideshow.width()/8;
-      var newSlideImageLeft='auto';
-      var newSlideImageToRight=0;
-      var newSlideImageToLeft='auto';
-      var newSlideContentLeft='auto';
-      var newSlideContentRight=0;
-      var activeSlideImageLeft=-slideshow.width()/4;
-    } else {
-      var newSlideRight='';
-      var newSlideLeft=0;
-      var newSlideImageRight='auto';
-      var newSlideImageLeft=-slideshow.width()/8;
-      var newSlideImageToRight='';
-      var newSlideImageToLeft=0;
-      var newSlideContentLeft=0;
-      var newSlideContentRight='auto';
-      var activeSlideImageLeft=slideshow.width()/4;
-    }
+                $ArrowNavigatorOptions: {                           //[Optional] Options to specify and enable arrow navigator or not
+                    $Class: $JssorArrowNavigator$,                  //[Requried] Class to create arrow navigator instance
+                    $ChanceToShow: 2                                 //[Optional] Steps to go for each navigation request, default value is 1
+                }
+            };
 
-    newSlide.css({
-      display:'block',
-      width:0,
-      right:newSlideRight,
-      left:newSlideLeft
-      ,zIndex:2
-    });
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
 
-    newSlideImage.css({
-      width:slideshow.width(),
-      right:newSlideImageRight,
-      left:newSlideImageLeft
-    });
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var bodyWidth = document.body.clientWidth;
+                if (bodyWidth)
+                    jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 1920));
+                else
+                    window.setTimeout(ScaleSlider, 30);
+            }
+            ScaleSlider();
 
-    newSlideContent.css({
-      width:slideshow.width(),
-      left:newSlideContentLeft,
-      right:newSlideContentRight
-    });
-
-    activeSlideImage.css({
-      left:0
-    });
-
-    TweenMax.set(newSlideElements,{y:20,force3D:true});
-    TweenMax.to(activeSlideImage,1,{
-      left:activeSlideImageLeft,
-      ease:Power3.easeInOut
-    });
-
-    TweenMax.to(newSlide,1,{
-      width:slideshow.width(),
-      ease:Power3.easeInOut
-    });
-
-    TweenMax.to(newSlideImage,1,{
-      right:newSlideImageToRight,
-      left:newSlideImageToLeft,
-      ease:Power3.easeInOut
-    });
-
-    TweenMax.staggerFromTo(newSlideElements,0.8,{alpha:0,y:60},{alpha:1,y:0,ease:Power3.easeOut,force3D:true,delay:0.6},0.1,function(){
-      newSlide.addClass('is-active').removeClass('is-new');
-      activeSlide.removeClass('is-active');
-      newSlide.css({
-        display:'',
-        width:'',
-        left:'',
-        zIndex:''
-      });
-
-      newSlideImage.css({
-        width:'',
-        right:'',
-        left:''
-      });
-
-      newSlideContent.css({
-        width:'',
-        left:''
-      });
-
-      newSlideElements.css({
-        opacity:'',
-        transform:''
-      });
-
-      activeSlideImage.css({
-        left:''
-      });
-
-      slideshow.find('.pagination').trigger('check');
-      slideshow.data('wait',false);
-      if(auto){
-        timeout=setTimeout(function(){
-          slideshowNext(slideshow,false,true);
-        },slideshowDuration);
-        slideshow.data('timeout',timeout);
-      }
-    });
-  }
-}
-
-function slideshowNext(slideshow,previous,auto){
-  var slides=slideshow.find('.slide');
-  var activeSlide=slides.filter('.is-active');
-  var newSlide=null;
-  if(previous){
-    newSlide=activeSlide.prev('.slide');
-    if(newSlide.length === 0) {
-      newSlide=slides.last();
-    }
-  } else {
-    newSlide=activeSlide.next('.slide');
-    if(newSlide.length==0)
-      newSlide=slides.filter('.slide').first();
-  }
-
-  slideshowSwitch(slideshow,newSlide.index(),auto);
-}
-
-function homeSlideshowParallax(){
-  var scrollTop=$(window).scrollTop();
-  if(scrollTop>windowHeight) return;
-  var inner=slideshow.find('.slideshow-inner');
-  var newHeight=windowHeight-(scrollTop/2);
-  var newTop=scrollTop*0.8;
-
-  inner.css({
-    transform:'translateY('+newTop+'px)',height:newHeight
-  });
-}
-
-$(document).ready(function() {
- $('.slide').addClass('is-loaded');
-
- $('.slideshow .arrows .arrow').on('click',function(){
-  slideshowNext($(this).closest('.slideshow'),$(this).hasClass('prev'));
-});
-
- $('.slideshow .pagination .item').on('click',function(){
-  slideshowSwitch($(this).closest('.slideshow'),$(this).index());
-});
-
- $('.slideshow .pagination').on('check',function(){
-  var slideshow=$(this).closest('.slideshow');
-  var pages=$(this).find('.item');
-  var index=slideshow.find('.slides .is-active').index();
-  pages.removeClass('is-active');
-  pages.eq(index).addClass('is-active');
-});
-
-var timeout=setTimeout(function(){
-  slideshowNext(slideshow,false,true);
-},slideshowDuration);
-
-slideshow.data('timeout',timeout);
-});
-
-if($('.main-content .slideshow').length > 1) {
-  $(window).on('scroll',homeSlideshowParallax);
-}
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+        });
