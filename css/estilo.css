@@ -13,12 +13,12 @@ html * {
 
 body {
  background: 
-    radial-gradient(circle, transparent 20%, #1abc9c 20%, #1abc9c 80%, transparent 80%, transparent),
-    radial-gradient(circle, transparent 20%, #1abc9c 20%, #1abc9c 80%, transparent 80%, transparent) 50px 50px,
-    linear-gradient(#242423 8px, transparent 8px) 0 -4px,
-    linear-gradient(90deg, #242423 8px, transparent 8px) -4px 0;
-  background-color: #1abc9c;
-  background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
+ radial-gradient(circle, transparent 20%, #1abc9c 20%, #1abc9c 80%, transparent 80%, transparent),
+ radial-gradient(circle, transparent 20%, #1abc9c 20%, #1abc9c 80%, transparent 80%, transparent) 50px 50px,
+ linear-gradient(#242423 8px, transparent 8px) 0 -4px,
+ linear-gradient(90deg, #242423 8px, transparent 8px) -4px 0;
+ background-color: #1abc9c;
+ background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
 
  font-family: "Audiowide";
  font-size: 100%;
@@ -38,34 +38,63 @@ header {
  box-shadow: 0px 0px 10px rgba(0,0,0,1);
 }
 
+/*botão log|cad*/
 
-
-.btn {
-  margin: 0px;
-  position: relative;
- font-family: "Audiowide";
- margin-left: 84%;
- border: 0px;
- padding: 22px 32px;
- cursor: pointer;
- transform: skew(-25deg);
-}
-.active a{
-  color: #fff;
-  font-size: 15px;
-  display: block;
-  text-decoration: none;
-  transform: skew(25deg);
+.button{
+  position:relative;
+  display:inline-block;
+  margin:-3px;
+  z-index: 3;
+  margin-left: 86%;
 }
 
-.active{
- background: #242423;
- border-radius: 8px;
- box-shadow: 0px 0px 4px rgba(0,0,0,1);
+.button a{
+  color:white;
+  font-weight:bold;
+  font-size:16px;
+  text-align: center;
+  text-decoration:none;
+  background-color: #1abc9c;
+  display:block;
+  position:relative;
+  padding:20px 20px;
+  
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+  
+  -webkit-box-shadow:inset 0 1px 0 #1abc9c, 0 10px 0 #41393E;
+  -moz-box-shadow:inset 0 1px 0 #1abc9c, 0 10px 0 #41393E;
+  box-shadow:inset 0 1px 0 #1abc9c, 0 10px 0 #41393E;
+  
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
 }
 
+.button a:active{
+  top:10px;
+  background-color: #1abc9c;
+  
+  -webkit-box-shadow:inset 0 1px 0 #1abc9c, inset 0 -3px 0 #41393E;
+  -moz-box-shadow:inset 0 1px 0 #1abc9c, inset 0 -3pxpx 0 #41393E;
+  box-shadow:inset 0 1px 0 #1abc9c, inset 0 -3px 0 #41393E;
+}
 
-
+.button:after{
+  content:"";
+  height:100%;
+  width:100%;
+  padding:4px;
+  position: absolute;
+  bottom:-15px;
+  left:-4px;
+  z-index:-1;
+  background-color:#2B1800;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
 
 /*----fimheader*/
 
@@ -79,6 +108,8 @@ header {
   padding: 0;
   list-style: none;
   transform: skew(-25deg);
+  border: 4px solid #242423;
+  border-radius: 25px;
 }
 .skew-menu ul li {
   background: #fff;
@@ -91,14 +122,14 @@ header {
   transition: all 0.3s linear;
 }
 .skew-menu ul li:first-child {
-  border-radius: 7px 0 0 7px;
+  border-radius: 20px 0 0 20px;
 }
 .skew-menu ul li:last-child {
   border-right: none;
-  border-radius: 0 7px 7px 0;
+  border-radius: 0 20px 20px 0;
 }
 .skew-menu ul li:hover {
-  background-color: #242423; 
+  background-color: #242423;
   color: #fff;
 }
 .skew-menu ul li a {
@@ -117,7 +148,7 @@ header {
 .Interface {  
   background: #F5CB5C;
   color: #aaa;
-  width: 1100px;
+  width: 1160px;
   max-width: 95%;
   margin: 5.5% auto;
   margin-top: 2%;
@@ -126,6 +157,8 @@ header {
   padding-top: 1%;
   padding-bottom: 1%;
   box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  border: 4px solid  #242423;
+  border-radius: 20px;
 }
 
 
@@ -153,27 +186,14 @@ header {
   padding: 20px;
 }
 
-/* Footer */
-.footer {
-  border-radius: 2px;
-  font-size: 20px;
-  color: white;
-   background: #242423;
 
-  padding: 90px;
-  text-align: center;
-  box-shadow: 0px 0px 10px rgba(0,0,0,1);
-
-}
-
-/* teste botao roupa */
 
 /* Back to top button style */
 .to-top {
   position: fixed;
   z-index: 9999;
-  bottom: 5px;
-  right: 6px;
+  bottom: 2px;
+  right: 2px;
   display: none;
 }
 .to-top a.back-to-top {
@@ -189,7 +209,87 @@ header {
   background-color: #242423;
   opacity: 0.7;
   transition: 0.3s;
+  border-radius: 20px;
 }
 .to-top a.back-to-top:hover {
   opacity: 1;
+}
+
+/* Social */
+/* Footer */
+.footer{
+  text-align: center;
+  color: white;
+  background: #242423;
+  font-size: 16px;
+  padding: 4em;
+  margin-bottom: 0px;
+
+}
+#copy{
+  position: relative;
+  bottom: -55px;
+  
+}
+
+#facebook {
+  background-color: #2e4a88;
+  box-shadow: 0 4px 0 #1B3D82;
+  text-shadow: 0 -1px -1px #1B3D82;
+  
+  display: inline;
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+  padding: 14px 50px;
+}
+#facebook:hover {
+  background-color: #354F84;
+}
+#facebook:active {
+  top: 2px;
+  box-shadow: 0 2px 0 #1B3D82;
+}
+#twitter {
+  background-color: #008DDE;
+  box-shadow: 0 4px 0 #0078BD;
+  
+  display: inline;
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+  padding: 14px 50px;
+}
+#twitter:active {
+  top: 2px;
+  box-shadow: 0 2px 0 #0078BD;
+}
+#twitter:hover {
+  background-color: #1397D8;
+}
+#google {
+  background-color: #CC3622;
+  box-shadow: 0 4px 0 #BA2714;
+  
+  display: inline;
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+  padding: 14px 50px;
+}
+#google:active {
+  top: 2px;
+  box-shadow: 0 2px 0 #BA2714;
+}
+#google:hover {
+  background-color: #D04829;
 }

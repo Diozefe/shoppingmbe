@@ -40,7 +40,7 @@ header {
 .containerslide {
   background-color: white;
     margin: 20px auto;
-    width: 90%;
+    width: 92%;
     height: 500px;
     overflow: hidden;
     border: 15px solid;
@@ -49,7 +49,7 @@ header {
     border-bottom-color: #242423;
     border-right-color: #242423;
     position: relative;
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0,0,0,1);
   }
   
@@ -98,6 +98,8 @@ header {
   padding: 0;
   list-style: none;
   transform: skew(-25deg);
+  border: 4px solid #242423;
+  border-radius: 25px;
 }
 .skew-menu ul li {
   background: #fff;
@@ -110,11 +112,11 @@ header {
   transition: all 0.3s linear;
 }
 .skew-menu ul li:first-child {
-  border-radius: 7px 0 0 7px;
+  border-radius: 20px 0 0 20px;
 }
 .skew-menu ul li:last-child {
   border-right: none;
-  border-radius: 0 7px 7px 0;
+  border-radius: 0 20px 20px 0;
 }
 .skew-menu ul li:hover {
   background-color: #242423;
@@ -151,7 +153,7 @@ header {
   border-radius: 6px;
   padding-top: 1%;
   padding-bottom: 1%;
-  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  box-shadow: 0px 0px 10px rgba(0,0,0,2);
 }
 
 /* produtos*/
@@ -179,35 +181,82 @@ header {
 
 .item img {
   display: block;
-   width: 320px;
+   width: 340px;
   height: 380px;
   background-color: #F5CB5C;
-  border-radius: 5px;
+  border-radius: 20px;
   border: 4px solid #242423;
   
 }
 
 #text{
   padding: 10px;
-  width: 320px;
-  height: 80px;
+  width: 340px;
+  height: 140px;
   background-color: white;
   border-radius: 5px;
   text-align: center;
    border: 4px solid #242423;
 }
+
+.button{
+  position:relative;
+  display:inline-block;
+  margin: 0px;
+  z-index: 3;
+  float: right;
+  bottom: -18px;
+}
+
+.button a{
+  color:white;
+  font-weight:bold;
+  font-size:16px;
+  text-align: center;
+  text-decoration:none;
+  background-color: #1abc9c;
+  display:block;
+  position:relative;
+  padding:12px 14px;
+  
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+  
+  -webkit-box-shadow:inset 0 1px 0 #1abc9c, 0 10px 0 #41393E;
+  -moz-box-shadow:inset 0 1px 0 #1abc9c, 0 10px 0 #41393E;
+  box-shadow:inset 0 1px 0 #1abc9c, 0 10px 0 #41393E;
+  
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.button a:active{
+  top:10px;
+  background-color: #1abc9c;
+  
+  -webkit-box-shadow:inset 0 1px 0 #1abc9c, inset 0 -3px 0 #41393E;
+  -moz-box-shadow:inset 0 1px 0 #1abc9c, inset 0 -3pxpx 0 #41393E;
+  box-shadow:inset 0 1px 0 #1abc9c, inset 0 -3px 0 #41393E;
+}
+
+.button:after{
+  content:"";
+  height:100%;
+  width:100%;
+  padding:4px;
+  position: absolute;
+  bottom:-15px;
+  left:-4px;
+  z-index:-1;
+  background-color:#2B1800;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
 /*----Fimproduto---*/
 
-.footer {
-  border-radius: 2px;
-  font-size: 20px;
-  color: white;
-  background: #242423;
-  padding: 90px;
-  text-align: center;
-   box-shadow: 0px 0px 10px rgba(0,0,0,1);
-
-}
 
 /* Back to top button style */
 .to-top {
@@ -233,4 +282,81 @@ header {
 }
 .to-top a.back-to-top:hover {
   opacity: 1;
+}
+
+.footer{
+  text-align: center;
+  color: white;
+  background: #242423;
+  font-size: 16px;
+  padding: 4em;
+  margin-bottom: 0px;
+
+}
+#copy{
+  position: relative;
+  bottom: -55px;
+  
+}
+
+#facebook {
+  background-color: #2e4a88;
+  box-shadow: 0 4px 0 #1B3D82;
+  text-shadow: 0 -1px -1px #1B3D82;
+  
+  display: inline;
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+  padding: 14px 50px;
+}
+#facebook:hover {
+  background-color: #354F84;
+}
+#facebook:active {
+  top: 2px;
+  box-shadow: 0 2px 0 #1B3D82;
+}
+#twitter {
+  background-color: #008DDE;
+  box-shadow: 0 4px 0 #0078BD;
+  
+  display: inline;
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+  padding: 14px 50px;
+}
+#twitter:active {
+  top: 2px;
+  box-shadow: 0 2px 0 #0078BD;
+}
+#twitter:hover {
+  background-color: #1397D8;
+}
+#google {
+  background-color: #CC3622;
+  box-shadow: 0 4px 0 #BA2714;
+  
+  display: inline;
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+  padding: 14px 50px;
+}
+#google:active {
+  top: 2px;
+  box-shadow: 0 2px 0 #BA2714;
+}
+#google:hover {
+  background-color: #D04829;
 }
