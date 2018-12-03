@@ -13,43 +13,33 @@ html * {
   box-sizing: border-box;
 }
 body {
-  background: 
-    radial-gradient(circle, transparent 20%, #1abc9c 20%, #1abc9c 80%, transparent 80%, transparent),
-    radial-gradient(circle, transparent 20%, #1abc9c 20%, #1abc9c 80%, transparent 80%, transparent) 50px 50px,
-    linear-gradient(#242423 8px, transparent 8px) 0 -4px,
-    linear-gradient(90deg, #242423 8px, transparent 8px) -4px 0;
-  background-color: #1abc9c;
-  background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
-
+  background-color: #d4d4dc;
  font-family: "Audiowide";
  font-size: 100%;
- color: #31353d;
+ color: #fff;
   
 }
 header {
  padding-top: 20px;
  padding-bottom: 20px;
- background-color: #F5CB5C;
- background-size: cover;
+ background-color: #393f4d;
  width: 100%;
  height: auto;
  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+ border-bottom: 10px ridge #1d1e22;
 }
 
 /*---Slider---*/
 .containerslide {
-  background-color: white;
-    margin: 20px auto;
-    width: 92%;
+    top: -15px;
+    background-color: white;
+    margin: 50px auto;
+    width: 94%;
     height: 500px;
     overflow: hidden;
-    border: 15px solid;
-    border-top-color: #242423;
-    border-left-color: #242423;
-    border-bottom-color: #242423;
-    border-right-color: #242423;
+    border: 20px solid #393f4d; 
     position: relative;
-    border-radius: 20px;
+    border-radius: 60px;
     box-shadow: 0px 0px 10px rgba(0,0,0,1);
   }
   
@@ -90,7 +80,7 @@ header {
 /*navbar*/
 .skew-menu {
   text-align: center;
-  margin-top: 2em;
+  margin-top:-4em;
 }
 .skew-menu ul {
   display: inline-block;
@@ -98,18 +88,18 @@ header {
   padding: 0;
   list-style: none;
   transform: skew(-25deg);
-  border: 5px solid #242423;
-  border-radius: 25px;
+  border: 10px ridge #1d1e22; 
+  border-radius: 30px;
 }
 .skew-menu ul li {
-  background: #fff;
+  background-color: #d4d4dc;
   float: left;
   border-right: 1px solid #eee;
   box-shadow: 0px 0px 10px rgba(0,0,0,1);
   text-transform: uppercase;
   color: #555;
   font-weight: bolder;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 .skew-menu ul li:first-child {
   border-radius: 20px 0 0 20px;
@@ -119,7 +109,7 @@ header {
   border-radius: 0 20px 20px 0;
 }
 .skew-menu ul li:hover {
-  background-color: #242423;
+  background-color: #1d1e22;
   color: #fff;
 }
 .skew-menu ul li a {
@@ -134,48 +124,68 @@ header {
 
 /*----fimheader*/
 
-
-
-
-/* teste botao roupa */
-
-
-/*--------------------*/
-
-.Interface {  
-  background: #fff;
-  color: #aaa;
-  width: 1200px;
-  max-width: 95%;
-  margin: 5.5% auto;
-  margin-top: 2%;
-  padding: 4%;
-  border-radius: 6px;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  box-shadow: 0px 0px 10px rgba(0,0,0,2);
+/*---efeitoneon*/
+#textomid{
+  color: #555;
+  text-align: center;
+  margin-top: 6%;
+  margin-bottom: 8%;
 }
+
+img#caixa{
+  position: absolute;
+  margin-top: 8%;
+  left: 50.1%;
+  transform: translate(-50%, -50%);
+
+}
+
+@keyframes neon{
+  from {
+    filter: drop-shadow(0 0 0 var(--cor-neon));
+  }
+  to {
+    filter: drop-shadow(0 0 30px var(--cor-neon));
+  }
+}
+
+img#texto{
+  animation: neon 2s alternate infinite ease-in-out;
+}
+img#caixa{
+  animation: neon 2s alternate infinite ease-in-out;
+}
+#caixa{
+  --cor-neon: #1d1e22;
+}
+
 
 /* produtos*/
 
 .container {
   display: flex;
   justify-content: center;
-
-}
-
-#tipo{
-  text-align: center;
-  color: #fff;
+  background: url(../img/lojis.jpg) fixed;
+  color: #555;
+  max-width: 95%;
+  margin: 5.5% auto;
+  margin-top: 2%;
+  padding: 4%;
+  border-radius: 60px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+   border: 20px solid #d4d4dc;;
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
 
 }
 
 .example {
+
   display: flex;
   justify-content: space-around;
   
   width: 1100px;
-  margin: 50px 0;
+  margin: 50px -20px;
   background-color: ;
 }
 
@@ -183,62 +193,66 @@ header {
   display: block;
    width: 340px;
   height: 380px;
-  background-color: #F5CB5C;
+  background-color: #1d1e22;
   border-radius: 20px;
-  border: 4px solid #242423;
-  
+  border: 10px outset #393f4d; 
+}
+.item img:hover{
+  background-color: #393f4d;
+  border: 10px outset #1d1e22;
+  transition: 1s;
 }
 
 #text{
+  margin-top: 5px;
   padding: 10px;
   width: 340px;
-  height: 140px;
-  background-color: white;
-  border-radius: 5px;
+  height: 150px;
+  background-color: #d4d4dc;
+  border-radius: 10px;
   text-align: center;
-   border: 4px solid #242423;
+  border: 10px outset #cccccc; 
+   
 }
 
 .button{
   position:relative;
-  display:inline-block;
   margin: 0px;
   z-index: 3;
   float: right;
-  bottom: -18px;
+  bottom: -21px;
 }
 
 .button a{
-  color:white;
-  font-weight:bold;
-  font-size:16px;
+  color: #d4d4dc;
+  font-size:30px;
   text-align: center;
   text-decoration:none;
-  background-color: #1abc9c;
+  background-color: #696969;
   display:block;
   position:relative;
-  padding:12px 14px;
+  padding: 1px 1px;
   
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   text-shadow: 0px 1px 0px #000;
   filter: dropshadow(color=#000, offx=0px, offy=1px);
   
-  -webkit-box-shadow:inset 0 1px 0 #1abc9c, 0 10px 0 #41393E;
-  -moz-box-shadow:inset 0 1px 0 #1abc9c, 0 10px 0 #41393E;
-  box-shadow:inset 0 1px 0 #1abc9c, 0 10px 0 #41393E;
+  -webkit-box-shadow:inset 0 1px 0  #696969, 0 10px 0 #594F4F;
+  -moz-box-shadow:inset 0 1px 0 #696969, 0 10px 0 #594F4F;
+  box-shadow:inset 0 1px 0 #696969, 0 10px 0 #594F4F;
   
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
 }
 
 .button a:active{
   top:10px;
-  background-color: #1abc9c;
+  background-color: #696969;
   
-  -webkit-box-shadow:inset 0 1px 0 #1abc9c, inset 0 -3px 0 #41393E;
-  -moz-box-shadow:inset 0 1px 0 #1abc9c, inset 0 -3pxpx 0 #41393E;
-  box-shadow:inset 0 1px 0 #1abc9c, inset 0 -3px 0 #41393E;
+  -webkit-box-shadow:inset 0 1px 0  #696969, inset 0 -3px 0 #594F4F;
+  -moz-box-shadow:inset 0 1px 0 #696969, inset 0 -3px 0 #594F4F;
+  box-shadow:inset 0 1px 0  #696969, inset 0 -3px 0  #594F4F;
 }
 
 .button:after{
@@ -250,10 +264,10 @@ header {
   bottom:-15px;
   left:-4px;
   z-index:-1;
-  background-color:#2B1800;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+  background-color: #1d1e22;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
 }
 /*----Fimproduto---*/
 
@@ -276,87 +290,94 @@ header {
   height: 50px;
   line-height: 50px;
   border-radius: 5px;
-  background-color: #242423;
-  opacity: 0.7;
+  background-color:  #444;
+  opacity: 0.5;
   transition: 0.3s;
 }
 .to-top a.back-to-top:hover {
   opacity: 1;
 }
 
+/*---footer ---*/
 .footer{
   text-align: center;
-  color: white;
-  background: #242423;
+  background-color: #696969;
   font-size: 16px;
-  padding: 4em;
-  margin-bottom: 0px;
+  padding: 2em;
+  border-top: 10px ridge #1d1e22; 
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
 
 }
 #copy{
-  position: relative;
-  bottom: -55px;
+
+  margin-top: 1%;
+  text-align: center;
+  color: #d4d4dc;
   
 }
 
-#facebook {
-  background-color: #2e4a88;
-  box-shadow: 0 4px 0 #1B3D82;
-  text-shadow: 0 -1px -1px #1B3D82;
-  
-  display: inline;
-  position: relative;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  border-radius: 20px;
-  padding: 14px 50px;
+/*social botões*/
+.social {
+  padding: 10px;
+  display: inline-flex;
+   border: 12px solid #696969;
+   border-radius: 60px;
+  align-items: center;
+  justify-content: center;
+  background-color: #d4d4dc;
+   box-shadow: 0px 0px 10px rgba(0,0,0,1);
 }
-#facebook:hover {
-  background-color: #354F84;
+
+i {
+  padding: 0px 10px;
 }
-#facebook:active {
-  top: 2px;
-  box-shadow: 0 2px 0 #1B3D82;
+
+.social i:nth-child(1) {
+  color: #444;
+  cursor: pointer;
+  text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);
+  transition: all ease-in-out 180ms;
 }
-#twitter {
-  background-color: #008DDE;
-  box-shadow: 0 4px 0 #0078BD;
-  
-  display: inline;
-  position: relative;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  border-radius: 20px;
-  padding: 14px 50px;
+
+.social i:nth-child(1):hover {
+  margin-top: -10px;
+  text-shadow: 0px 16px 10px rgba(0, 0, 0, 0.3);
+  transform: translate(0, -8);
 }
-#twitter:active {
-  top: 2px;
-  box-shadow: 0 2px 0 #0078BD;
+
+.social i:nth-child(2) {
+  color: #444;
+  cursor: pointer;
+  text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);
+  transition: all ease-in-out 150ms;
 }
-#twitter:hover {
-  background-color: #1397D8;
+
+.social i:nth-child(2):hover {
+  margin-top: -10px;
+  text-shadow: 0px 16px 10px rgba(0, 0, 0, 0.3);
+  transform: translate(0, -8);
 }
-#google {
-  background-color: #CC3622;
-  box-shadow: 0 4px 0 #BA2714;
-  
-  display: inline;
-  position: relative;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  border-radius: 20px;
-  padding: 14px 50px;
+
+.social i:nth-child(3) {
+  color: #444;
+  cursor: pointer;
+  text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+  transition: all ease-in-out 150ms;
 }
-#google:active {
-  top: 2px;
-  box-shadow: 0 2px 0 #BA2714;
+
+.social i:nth-child(3):hover {
+  margin-top: -10px;
+  text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.4);
+  transform: translate(0, -5);
 }
-#google:hover {
-  background-color: #D04829;
+.social i:nth-child(4) {
+  color: #444;
+  cursor: pointer;
+  text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);
+  transition: all ease-in-out 150ms;
+}
+.social i:nth-child(4):hover {
+  margin-top: -10px;
+  text-shadow: 0px 16px 10px rgba(0, 0, 0, 0.3);
+  transform: translate(0, -8);
 }
