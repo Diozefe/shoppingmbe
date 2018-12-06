@@ -140,7 +140,7 @@ html{
     user-select: none;
     cursor: pointer;
   }
-  .direita{    float: right; padding-left: 10px;width: 50%;} .esquerda{ float: left; padding-right: 10px; width: 50%;}
+  .direita{  float: right; padding-left: 10px;width: 50%;} .esquerda{ float: left; padding-right: 10px; width: 50%;}
   .divgrade{flex-direction: row;}
   #btn-back{
     transition: 1s;

@@ -12,10 +12,9 @@ html * {
 }
 
 body {
-background-color: #1d1e22;
- font-family: "Audiowide";
- font-size: 100%;
- color: #fff;
+  background-color: #4b86b4;
+  font-family: "Audiowide";
+  font-size: 100%;
 }
 
 header {
@@ -23,70 +22,47 @@ header {
  text-align: center;
  padding-top: 20px;
  padding-bottom: 80px;
- background-color: #393f4d;
+ background-color: #63ace5;
  width: 100%;
  height: auto;
-box-shadow: 0px 0px 10px rgba(0,0,0,1);
- border-bottom: 10px ridge #1d1e22;
+ box-shadow: 0px 0px 10px rgba(0,0,0,1);
+ border-bottom: 10px ridge #fff;
 }
 
 /*botão log|cad*/
 
-.button{
+.button {
+
   position:relative;
   display:inline-block;
-  margin:-4px;
+  margin: -6px;
   z-index: 3;
-  margin-left: 92%;
-}
+  
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #d4d4dc;
+  margin-left: 91%;
 
+  border: 10px solid  #63ace5;
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  border-radius: 60px;
+  padding: 15px 15px;
+  cursor: pointer;
+}
 .button a{
-  color: #594F4F;
+  color: #1d1e22;
   font-weight:bold;
-  font-size:15px;
+  font-size:14px;
   text-align: center;
   text-decoration:none;
-  background-color: #d4d4dc;
   display:block;
   position:relative;
-  padding:15px 17px;
-  
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  text-shadow: 0px 1px 0px #000;
-  filter: dropshadow(color=#000, offx=0px, offy=1px);
-  
-  -webkit-box-shadow:inset 0 1px 0  #696969, 0 10px 0 #594F4F;
-  -moz-box-shadow:inset 0 1px 0 #696969, 0 10px 0 #594F4F;
-  box-shadow:inset 0 1px 0 #696969, 0 10px 0 #594F4F;
-  
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
 }
-
-.button a:active{
-  top:10px;
-  background-color: #696969;
-  
-  -webkit-box-shadow:inset 0 1px 0  #696969, inset 0 -3px 0 #594F4F;
-  -moz-box-shadow:inset 0 1px 0 #696969, inset 0 -3px 0 #594F4F;
-  box-shadow:inset 0 1px 0  #696969, inset 0 -3px 0  #594F4F;
+.button:hover{
+  background-color: #63ace5;
+  transition: .6s;
 }
-
-.button:after{
-  content:"";
-  height:100%;
-  width:100%;
-  padding:4px;
-  position: absolute;
-  bottom:-15px;
-  left:-4px;
-  z-index:-1;
-  background-color: #1d1e22;
-  -webkit-border-radius: 35px;
-  -moz-border-radius: 35px;
-  border-radius: 35px;
-}
+/*----fim botão log/cad---*/
 
 .skew-menu {
   text-align: center;
@@ -98,7 +74,7 @@ box-shadow: 0px 0px 10px rgba(0,0,0,1);
   padding: 0;
   list-style: none;
   transform: skew(-25deg);
-  border: 10px ridge #1d1e22; 
+  border: 10px ridge #fff; 
   border-radius: 30px;
 }
 .skew-menu ul li {
@@ -119,7 +95,7 @@ box-shadow: 0px 0px 10px rgba(0,0,0,1);
   border-radius: 0 20px 20px 0;
 }
 .skew-menu ul li:hover {
-  background-color: #1d1e22;
+  background-color:  #aaaaaa;
   color: #fff;
 }
 .skew-menu ul li a {
@@ -135,7 +111,7 @@ box-shadow: 0px 0px 10px rgba(0,0,0,1);
 
 /*---efeitoneon*/
 #textomid{
-  color: #696969;
+  color: #555;
   text-align: center;
   margin-top: 6%;
   margin-bottom: 8%;
@@ -149,28 +125,6 @@ img#caixa{
 
 }
 
-@keyframes neon{
-  from {
-    filter: drop-shadow(0 0 0 var(--cor-neon));
-  }
-  to {
-    filter: drop-shadow(0 0 30px var(--cor-neon));
-  }
-}
-
-img#texto{
-  animation: neon 2s alternate infinite ease-in-out;
-}
-img#caixa{
-  animation: neon 2s alternate infinite ease-in-out;
-}
-
-
-#caixa{
-  --cor-neon: #696969;
-}
-
-
 
 /* Column container */
 
@@ -179,11 +133,11 @@ img#caixa{
   justify-content: center;
   background-color: #d4d4dc;
   color: #fff;
-  max-width: 95%;
+  max-width: 93%;
   margin: 5% auto;
   padding: 4%;
   border-radius: 60px;
-  border: 20px solid #1d1e22;
+  border: 20px solid #4b86b4;
   box-shadow: 0px 0px 10px rgba(0,0,0,1);
 }
 
@@ -201,11 +155,12 @@ img#caixa{
 
 /* Fake imagem, just for this example */
 .fakeimg {
-  background-color: #1d1e22;
+  background-color: #adcbe3;
   width: 100%;
   padding: 20px;
-   border: 10px outset #1d1e22;
-   border-radius: 60px;
+  border: 10px solid #d4d4dc;
+  border-radius: 60px;
+   box-shadow: 0px 0px 10px rgba(0,0,0,1);
 }
 
 /*contato*/
@@ -230,7 +185,7 @@ img#caixa{
   height: 50px;
   line-height: 50px;
   border-radius: 5px;
-  background-color:  #444;
+   background-color:  #49657b;
   opacity: 0.5;
   transition: 0.3s;
 }
@@ -241,11 +196,10 @@ img#caixa{
 /* Footer */
 .footer{
   text-align: center;
-  background-color: #696969;
+  background-color: #63ace5;
   font-size: 16px;
   padding: 2em;
-  border-top: 10px ridge #1d1e22;; 
-  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+
 }
 #copy{
 
@@ -259,19 +213,19 @@ img#caixa{
 .social {
   padding: 10px;
   display: inline-flex;
-   border: 12px solid  #696969;
-   background-color: #d4d4dc;
+   border: 12px solid #63ace5;
    border-radius: 60px;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  background-color: #d4d4dc;
+   box-shadow: 0px 0px 10px rgba(0,0,0,1);
 }
 .social i {
   padding: 0px 10px;
 }
 
 .social i:nth-child(1) {
-  color: #444;
+  color: #3385c6;
   cursor: pointer;
   text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);
   transition: all ease-in-out 180ms;
@@ -284,7 +238,7 @@ img#caixa{
 }
 
 .social i:nth-child(2) {
-  color: #444;
+  color: #84c1ff;
   cursor: pointer;
   text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);
   transition: all ease-in-out 150ms;
@@ -309,7 +263,7 @@ img#caixa{
   transform: translate(0, -5);
 }
 .social i:nth-child(4) {
-  color: #444;
+  color:  #ff6f69;
   cursor: pointer;
   text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);
   transition: all ease-in-out 150ms;
