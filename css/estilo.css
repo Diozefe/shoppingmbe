@@ -22,7 +22,7 @@ header {
  text-align: center;
  padding-top: 20px;
  padding-bottom: 80px;
- background-color: #63ace5;
+ background-color:  #5fc7ea;
  width: 100%;
  height: auto;
  box-shadow: 0px 0px 10px rgba(0,0,0,1);
@@ -32,7 +32,6 @@ header {
 /*botão log|cad*/
 
 .button {
-
   position:relative;
   display:inline-block;
   margin: -6px;
@@ -43,14 +42,14 @@ header {
   background-color: #d4d4dc;
   margin-left: 91%;
 
-  border: 10px solid  #63ace5;
+  border: 10px solid   #5fc7ea;
   box-shadow: 0px 0px 10px rgba(0,0,0,1);
   border-radius: 60px;
   padding: 15px 15px;
   cursor: pointer;
 }
 .button a{
-  color: #1d1e22;
+  color: #fff;
   font-weight:bold;
   font-size:14px;
   text-align: center;
@@ -59,8 +58,8 @@ header {
   position:relative;
 }
 .button:hover{
-  background-color: #63ace5;
-  transition: .6s;
+  background-color:  #5fc7ea;
+  transition: .8s;
 }
 /*----fim botão log/cad---*/
 
@@ -196,7 +195,7 @@ img#caixa{
 /* Footer */
 .footer{
   text-align: center;
-  background-color: #63ace5;
+  background-color:  #5fc7ea;
   font-size: 16px;
   padding: 2em;
 
@@ -205,20 +204,21 @@ img#caixa{
 
   margin-top: 1%;
   text-align: center;
-  color: #d4d4dc;
+  color: #fff;
   
 }
 
 /*social botões*/
 .social {
-  padding: 10px;
+  padding: 12px;
   display: inline-flex;
-   border: 12px solid #63ace5;
+   border: 12px solid  #5fc7ea;
    border-radius: 60px;
   align-items: center;
   justify-content: center;
   background-color: #d4d4dc;
    box-shadow: 0px 0px 10px rgba(0,0,0,1);
+    margin-bottom: 20px;
 }
 .social i {
   padding: 0px 10px;

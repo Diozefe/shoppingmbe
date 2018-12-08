@@ -23,12 +23,13 @@ body {
 header {
  padding-top: 20px;
  padding-bottom: 20px;
- background-color:  #63ace5;
+ background-color:   #5fc7ea;
  width: 100%;
  height: auto;
  box-shadow: 0px 0px 10px rgba(0,0,0,1);
  border-bottom: 10px ridge #fff;  
 }
+
 
 /*---Slider---*/
 .containerslide {
@@ -38,7 +39,7 @@ header {
     width: 94%;
     height: 500px;
     overflow: hidden;
-    border: 20px solid  #63ace5; 
+    border: 20px solid #5fc7ea;
     position: relative;
     border-radius: 60px;
     box-shadow: 0px 0px 10px rgba(0,0,0,1);
@@ -125,7 +126,7 @@ header {
 
 /*----fimheader*/
 
-/*---efeitoneon*/
+/*---textos meio---*/
 #textomid{
   font-size: 26px;
   color: #555;
@@ -141,12 +142,23 @@ img#caixa{
   transform: translate(-50%, -50%);
 
 }
+.titulo{
+  font-size: 20px;
+  color: #555;
+  background-color: #d4d4dc;
+  width: 300px;
+ margin: -25px auto;
+ border-radius: 60px;
+ padding: 20px;
+ box-shadow: 0px 0px 10px rgba(0,0,0,1);
+ border: 10px outset #fff;
+}
 
 /*------Slide Lojas & Perfil-----*/
 
 .container{
   border-radius: 60px;
-  background-color: #adcbe3;
+  background-color: #49657b;
   border: 20px solid   #4b86b4;
   box-shadow: 0px 0px 10px rgba(0,0,0,1);
 }
@@ -207,10 +219,10 @@ img#caixa{
 
   .post-slide .post-img img{
     
-    border: 10px outset #d4d4dc;
+    border: 10px ridge #FFF;
     border-radius: 20px;
-    width: 360px;
-    height: 360px;
+    width: 370px;
+    height: 370px;
     background-color:#d4d4dc;
     box-shadow: 0px 0px 10px rgba(0,0,0,1);
   }
@@ -239,9 +251,9 @@ img#caixa{
     border-radius: 50%;
     position: absolute;
     top: -45px;
-    right: 10px;
+    left: 7px;
     overflow: hidden;
-    border: 8px outset #d4d4dc;
+    border: 8px outset #FFF;
     box-shadow: 0px 0px 10px rgba(0,0,0,1); 
   }
 
@@ -260,21 +272,22 @@ img#caixa{
     background-color: #d4d4dc;
     height: 45px;
     margin-bottom: 0px;
-    border: 10px solid #adcbe3;
+    border: 10px solid #49657b;
      box-shadow: 0px 0px 10px rgba(0,0,0,1);
     padding:5px;
-
+    border-radius: 30px;
   }
 
   .post-slide .post-description{
-    font-size: 13px;
+    font-size: 14px;
     color:  #d4d4dc;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     background-color: #242423;
-    border: 10px solid #adcbe3;
+    border: 10px solid #49657b;
     box-shadow: 0px 0px 10px rgba(0,0,0,1);
-     padding:4px;
+     padding: 8px;
+     border-radius: 30px;
   }
 
 
@@ -302,19 +315,16 @@ img#caixa{
 }
 
 .example {
-
   display: flex;
   justify-content: space-around;
-  
-  width: 1100px;
-  margin: 50px -20px;
+  width: 100%;
+  margin: 20px -20px;
   background-color: ;
 }
 
 .item img {
-  display: block;
    width: 340px;
-  height: 380px;
+  height: 360px;
   background-color:  #d4d4dc;
   border-radius: 20px;
   border: 10px ridge #fff;
@@ -402,7 +412,7 @@ img#caixa{
 /*---footer ---*/
 .footer{
   text-align: center;
-  background-color:  #63ace5;
+  background-color:  #5fc7ea;
   font-size: 16px;
   padding: 2em;
 
@@ -411,20 +421,22 @@ img#caixa{
 
   margin-top: 1%;
   text-align: center;
-  color: #d4d4dc;
+  color: #fff;
   
 }
 
 /*social botões*/
 .social {
-  padding: 10px;
+  padding: 12px;
   display: inline-flex;
-   border: 12px solid  #63ace5;
+   border: 12px solid   #5fc7ea;
    border-radius: 60px;
   align-items: center;
   justify-content: center;
   background-color: #d4d4dc;
    box-shadow: 0px 0px 10px rgba(0,0,0,1);
+   margin-bottom: 20px;
+
 }
 
 i {

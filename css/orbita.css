@@ -10,13 +10,13 @@
 	margin: 0 auto;
 	position: relative;
 	top: 0rem;
-	border: 20px solid #63ace5;
+	border: 20px solid  #5fc7ea;
 	background-color: #d4d4dc;
 	box-shadow: 0px 0px 10px rgba(0,0,0,1);
 }
 
 .ellipse-container .greeting {
-	color: #1d1e22;
+	color: #fff;
 	position: relative;
 	top: 20rem;
 	left: 1.9rem;
@@ -35,7 +35,7 @@
 	height: .3rem;
 	border-radius: 50%;
 	display: inline-block;
-	background-color: #395284;
+	background-color: #fff;
 	position: relative;
 	top: -0.65rem;
 	left: -5.05rem;
@@ -66,25 +66,28 @@
 	bottom: 0;
 	right: 0;
 	position: absolute;
-	opacity: .3;
+	opacity: .2;
 }
 
 .ellipse__outer--thick {
 	width: 99.9%;
 	height: 99.9%;
-	border-color: #1d1e22 transparent;
+	border-color: #fff transparent;
 	border-width: 5px;
 	transform: rotate(-45deg);
 	animation: ellipseRotate 15s ease-in-out infinite;
+	z-index: 1;
 }
 
 .ellipse__orbit {
 	width: 2.5rem;
 	height: 2.5rem;
 	border-width: 3px;
-	border-color: #1d1e22;
+	border-color: #fff;
 	top: 5rem;
 	right: 6.75rem;
+	z-index: 5;
+	box-shadow: 0px 0px 10px rgba(0,0,0,1);
 }
 
 .ellipse__orbit:before {
@@ -93,13 +96,15 @@
 	height: 0.9rem;
 	border-radius: 50%;
 	display: inline-block;
-	background-color: #1d1e22;
+	background-color: #fff;
 	margin: 0 auto;
 	left: 0;
 	right: 0;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
+	z-index: 4;
+	box-shadow: 0px 0px 10px rgba(0,0,0,1);
 }
 
 @keyframes ellipseRotate {
