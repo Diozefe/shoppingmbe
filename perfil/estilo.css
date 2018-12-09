@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Orbitron|Press+Start+2P');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+
+	color: #fff;
+    background:  #4b86b4;
+  
+    font-family: "Audiowide";
+  font-size: 100%;
+}
+.page {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+
+/*--
+.container {
+  overflow: hidden;
+  background-color: red;
+   margin: 10px 10px;
+}
+--*/
+/* titulos */
+.title{
+
+  padding: 4px;
+  margin-right:70%;
+  text-align: center;
+  margin-left: 0%;
+  color: #555;
+  background-color: none;
+  border-radius: 60px;
+  border: 10px solid #d4d4dc;
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+ 
+  font-size: 18px;
+}
+.title2{
+  padding: 8px;
+  margin-right:60%;
+  text-align: center;
+  margin-left: 0%;
+  color: #555;
+  background-color: #d4d4dc;
+  border-radius: 60px;
+  border: 10px solid #d4d4dc;
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+ 
+  font-size: 18px;
+}
+/*---------*/
+
+/*imagens*/
+.article-image {
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  border: 15px outset #fff;
+  border-radius: 50%;
+  margin: 0 33%;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+.avatar {
+  float: left;
+  width: 90px;
+  height: 90px;
+  margin: 40px 9px;
+  border-radius: 50%;
+  background-color: #d4d4dc;
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  cursor: pointer;
+  border: 5px solid #fff;
+}
+
+/*colunas*/
+.content {
+	border: 20px solid  #4b86b4;
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+	border-radius: 30px;
+	padding: 20px;
+	float: left;
+  width: 640px;                 /* Add this */
+  height: 920px;
+  background-color: #d4d4dc;
+}
+.content h1{
+  font-size: 22px;
+  margin: 25px;
+  padding: 6px;
+  margin-right:20%;
+  text-align: center;
+  margin-left: 20%;
+  color: #fff;
+  background-color:#F5CF8E;
+  border-radius: 60px;
+  border: 10px solid #d4d4dc;
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+}
+.content2 {
+	margin-left: 0%;
+	border: 20px solid #4b86b4;
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+	border-radius: 30px;
+	padding: 20px;
+	float: right;
+  width: 640px;                 /* Add this */
+  height: 920px;
+  background-color: #F5CF8E;
+  margin-bottom: 30px;
+}
+.columnpub {
+  display: table;
+ text-align: justify;
+  width: 100%;
+  margin: 8px 0px;
+  height: auto;
+  background-color: #B2D6FF;    /* Medium blue */
+  border-radius:30px;
+  border: 10px solid #FFF;
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+}
+
+
+.username {
+  font-size: 18px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.comment {
+  text-align: left;
+  color: #555;
+  border-radius: 30px;
+  background: transparent;
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  border: 5px solid #fff;
+  margin: 8px;
+  overflow: hidden;
+   width: 78%; 
+   height: 110px;
+   padding: 10px; 
+   font-size: 14px;/* This is important */
+}
+
+/*--P--*/
+p {
+  border-radius: 30px;
+  margin: 20px;
+  padding: 15px;
+  width: 80%;
+  margin-bottom: 20px;
+  background-color: #F5CF8E;
+  border: 10px solid #d4d4dc;
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  margin-left: 10%;
+  margin-right: 0%; 
+
+}
+#block1{
+  margin-top: 15px;
+  color: #555;
+  background-color:#B2D6FF;  
+  margin-left: 40%; 
+  text-align: justify;
+  border: 10px solid #d4d4dc;
+    box-shadow: 0px 0px 10px rgba(0,0,0,1);
+}
+
+/*--Rodapé--*/
+.footer {
+   box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  border: 20px solid  #4b86b4;
+  margin: 20px auto;
+	clear: both;
+  width: 95%;   
+  height: 500px;
+  background-color: #d4d4dc;
+  border-radius: 30px; 
+}
+
+.row{
+
+  border-radius: 60px;
+  margin-left: 5px;
+    margin-top: 0px;
+    width: 100%;
+    height: auto;
+    background-color: none;
+  }
+.col-carousel {
+  margin: 30px -8px;
+}
+
+/* owl nav */
+.owl-prev span, .owl-next span {
+  color: #FFF;
+}
+
+.owl-prev span:hover, 
+.owl-next span:hover {
+  color: #8199A3;
+}
+
+.owl-prev, .owl-next {
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+
+.owl-prev {
+  left: 7px;
+}
+
+.owl-next {
+  right: 7px;
+}
+
+
+
+/*BOTÃO DE ADICIONAR PRODUTO*/
+.produto{
+  width: 350px;
+  height: 300px;
+  border-radius: 20px;
+  background-color: #3c6388;
+}
+.buttonprod{
+  top: 8px;
+  position:relative;
+  display:inline-block;
+  z-index: 3;
+  font-weight: bold;
+  background-color: #F5CF8E;
+  margin: 0 auto;
+  border: 10px solid #F5CF8E;
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  border-radius: 60px;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+.buttonprod a{
+  color: #fff;
+  font-weight:bold;
+  text-align: center;
+  text-decoration:none;
+  display:block;
+  position:relative;
+}
+
+.buttonprod:hover{
+   border: 10px solid #d4d4dc;
+  transition: .6s;
+}
+
+
+/*SOCIAL BOTÃO*/
+#copy{
+
+  margin-top: 1%;
+  text-align: center;
+  color: #fff;
+  
+}
+.social {
+  width: 80%;
+  padding: 24px;
+  height: 130px;
+  display: inline-flex;
+  border: 10px solid  #d4d4dc;
+  border-radius: 30px;
+  
+  justify-content: center;
+  background-color: #F5CF8E;
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  margin: 12px 10%;
+}
+.social i {
+  padding: 0px 10px;
+}
+
+.social i:nth-child(1) {
+  color: #3385c6;
+  cursor: pointer;
+  text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);
+  transition: all ease-in-out 180ms;
+}
+
+.social i:nth-child(1):hover {
+  margin-top: -10px;
+  text-shadow: 0px 16px 10px rgba(0, 0, 0, 0.3);
+  transform: translate(0, -8);
+}
+
+.social i:nth-child(2) {
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);
+  transition: all ease-in-out 150ms;
+}
+
+.social i:nth-child(2):hover {
+  margin-top: -10px;
+  text-shadow: 0px 16px 10px rgba(0, 0, 0, 0.3);
+  transform: translate(0, -8);
+}
+
+.social i:nth-child(3) {
+  color: #009979;
+  cursor: pointer;
+  text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+  transition: all ease-in-out 150ms;
+}
+
+.social i:nth-child(3):hover {
+  margin-top: -10px;
+  text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.4);
+  transform: translate(0, -5);
+}
+.social i:nth-child(4) {
+  color:  #9b4980;
+  cursor: pointer;
+  text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);
+  transition: all ease-in-out 150ms;
+}
+.social i:nth-child(4):hover {
+  margin-top: -10px;
+  text-shadow: 0px 16px 10px rgba(0, 0, 0, 0.3);
+  transform: translate(0, -8);
+}
