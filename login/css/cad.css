@@ -156,123 +156,22 @@ body{
 }
 .form-row {
     margin-top: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     display: flex;
     justify-content: flex-start;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
 }
-.form-row1 {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    flex-wrap: wrap;
-    float: left; padding-right: 0px; width: 50%;
-}
-.form-row2 {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    flex-wrap: wrap;
-    float: right; padding-left: 0px;
-    width: 50%;
-}
-.form-row3 {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-left: 25%;
-    width: 50%;
-}
-.form-row input[type='text'] {
+
+.form-row input[type='text'], input[type='email'], input[type='password'],input[type='date'],input[type='usuario']{
   background-color: #FFFFFF;
   border: 8px solid #D6D9DC;
   box-shadow: 0px 0px 10px rgba(0,0,0,1);
   border-radius: 3px;
-  width: 75%;
+  width: 100%;
   padding: 7px;
-  margin-left: 12%;
+  margin: 0;
   font-size: 14px;
-}
-.form-row1 input[type='text'] {
-  background-color: #FFFFFF;
-  border: 8px solid #D6D9DC;
-  box-shadow: 0px 0px 10px rgba(0,0,0,1);
-  border-radius: 3px;
-  width: 75%;
-  padding: 7px;
-  margin-left: 12%;
-  font-size: 14px;
-}
-.form-row input[type='email'] {
-  background-color: #FFFFFF;
-  border: 8px solid #D6D9DC;
-  box-shadow: 0px 0px 10px rgba(0,0,0,1);
-  border-radius: 3px;
-  width: 75%;
-  padding: 7px;
-  font-size: 14px;
-  margin-left: 12%;
-  font-size: 14px;
-}
-.form-row1 input[type='password'] {
-  background-color: #FFFFFF;
-  border: 8px solid #D6D9DC;
-  box-shadow: 0px 0px 10px rgba(0,0,0,1);
-  border-radius: 3px;
-  width: 75%;
-  padding: 7px;
-  font-size: 14px;
-  margin-left: 12%;
-  font-size: 14px;
-}
-.form-row2 input[type='password'] {
-  background-color: #FFFFFF;
-  border: 8px solid #D6D9DC;
-  box-shadow: 0px 0px 10px rgba(0,0,0,1);
-  border-radius: 3px;
-  width: 75%;
-  padding: 7px;
-  font-size: 14px;
-  margin-left: 12%;
-  font-size: 14px;
-}
-.form-row3 input[type='password'] {
-  background-color: #FFFFFF;
-  border: 8px solid #D6D9DC;
-  box-shadow: 0px 0px 10px rgba(0,0,0,1);
-  border-radius: 3px;
-  width: 75%;
-  padding: 7px;
-  font-size: 14px;
-  margin-left: 12%;
-}
-.form-row1 input[type='usuario'] {
-  background-color: #FFFFFF;
-  border: 8px solid #D6D9DC;
-  box-shadow: 0px 0px 10px rgba(0,0,0,1);
-  border-radius: 3px;
-  width: 75%;
-  padding: 7px;
-  font-size: 14px;
-  margin-left: 12%;
-}
-.form-row2 input[type='date'] {
-  background-color: #FFFFFF;
-  border: 8px solid #D6D9DC;
-  box-shadow: 0px 0px 10px rgba(0,0,0,1);
-  border-radius: 3px;
-  width: 75%;
-  padding: 7px;
-  font-size: 14px;
-  margin-left: 12%;
 }
 .form-row label {
   margin-bottom: 15px;
@@ -312,6 +211,19 @@ body{
     color: #36333a;
     background-color: #d4d4dc;
     transition: .5s;
+}
+.div-ajust{
+    flex-direction: column;
+}
+.div-dir{
+    float: right;
+    padding-left: 10px;
+    width: 50%;
+}
+.div-esq{
+    float: left;
+    padding-right: 10px;
+    width: 50%;
 }
 
 

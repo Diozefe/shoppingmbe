@@ -13,7 +13,7 @@ html * {
   box-sizing: border-box;
 }
 body {
-  background: #4b86b4;
+  background-image: linear-gradient(180deg, rgb(68, 72, 255) 0%, rgb(33, 212, 253) 100%);
  background-size: cover;
  font-family: "Audiowide";
  font-size: 100%;
@@ -23,13 +23,15 @@ body {
 header {
  padding-top: 20px;
  padding-bottom: 20px;
- background-color:  #63ace5;
+ background:none;
  width: 100%;
  height: auto;
  box-shadow: 0px 0px 10px rgba(0,0,0,1);
  border-bottom: 10px ridge #fff;  
 }
-
+p{
+  font-family: "Arial Narrow",cursive;
+}
 /*---Slider---*/
 .containerslide {
     top: -15px;
@@ -38,7 +40,7 @@ header {
     width: 94%;
     height: 500px;
     overflow: hidden;
-    border: 20px solid  #63ace5; 
+    border: 20px solid #8438c7;
     position: relative;
     border-radius: 60px;
     box-shadow: 0px 0px 10px rgba(0,0,0,1);
@@ -93,12 +95,12 @@ header {
   border-radius: 30px;
 }
 .skew-menu ul li {
-  background-color: #d4d4dc;
+  background-color: #8438c7;
   float: left;
   border-right: 1px solid #eee;
   box-shadow: 0px 0px 10px rgba(0,0,0,1);
   text-transform: uppercase;
-  color: #555;
+  color: #FFFFFF;
   font-weight: bolder;
   transition: all 0.2s linear;
 }
@@ -110,8 +112,8 @@ header {
   border-radius: 0 20px 20px 0;
 }
 .skew-menu ul li:hover {
-  background-color:  #aaaaaa;
-  color: #fff;
+  background-color:  #ffffff;
+  color: #8438c7;
 }
 .skew-menu ul li a {
   font-size: 13px;
@@ -146,8 +148,8 @@ img#caixa{
 
 .container{
   border-radius: 60px;
-  background-color: #adcbe3;
-  border: 20px solid   #4b86b4;
+  background-color: #FFFFFF;
+  border: 20px solid  #22cffd;
   box-shadow: 0px 0px 10px rgba(0,0,0,1);
 }
 
@@ -195,7 +197,7 @@ img#caixa{
     top: 0;
     left: 0;
     opacity: 0;
-    background: rgba(0,0,0,0.6);
+    background: rgba(132, 56, 199, 0.41);
     transition: opacity 0.40s linear 0s;
     border-radius: 20px;
   }
@@ -207,7 +209,7 @@ img#caixa{
 
   .post-slide .post-img img{
     
-    border: 10px outset #d4d4dc;
+    border: 10px outset #2babfd;
     border-radius: 20px;
     width: 360px;
     height: 360px;
@@ -241,7 +243,7 @@ img#caixa{
     top: -45px;
     right: 10px;
     overflow: hidden;
-    border: 8px outset #d4d4dc;
+    border: 8px outset #8438c7;
     box-shadow: 0px 0px 10px rgba(0,0,0,1); 
   }
 
@@ -257,22 +259,22 @@ img#caixa{
     margin: 0 0 10px 0;
     text-transform: uppercase;
     transition: all 0.30s linear 0s;
-    background-color: #d4d4dc;
+    background-color: #FFFFFF;
     height: 45px;
     margin-bottom: 0px;
-    border: 10px solid #adcbe3;
+    border: 10px solid #2babfd;
      box-shadow: 0px 0px 10px rgba(0,0,0,1);
     padding:5px;
 
   }
 
   .post-slide .post-description{
-    font-size: 13px;
-    color:  #d4d4dc;
+    font-size: 16px;
+    color:  #000000;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: #242423;
-    border: 10px solid #adcbe3;
+    background-color: #FFFFFF;
+    border: 10px solid #2babfd;
     box-shadow: 0px 0px 10px rgba(0,0,0,1);
      padding:4px;
   }
@@ -286,7 +288,7 @@ img#caixa{
 .containerprod {
   display: flex;
   justify-content: center;
-  background-color: #49657b;
+  background-color: #FFFFFF;
   background-size: 16px 16px;
   color: #555;
   max-width: 92.6%;
@@ -296,7 +298,7 @@ img#caixa{
   border-radius: 60px;
   padding-top: 1%;
   padding-bottom: 1%;
-   border: 20px solid #4b86b4;
+   border: 20px solid #22cffd;
   box-shadow: 0px 0px 10px rgba(0,0,0,1);
 
 }
@@ -317,12 +319,12 @@ img#caixa{
   height: 380px;
   background-color:  #d4d4dc;
   border-radius: 20px;
-  border: 10px ridge #fff;
+  border: 10px ridge #22cffd;
    box-shadow: 0px 0px 10px rgba(0,0,0,1);
 }
 .item img:hover{
-  background-color:  #aaaaaa;
-  border: 10px ridge  #aaaaaa;
+  background-color:  #8438c7;
+  border: 10px ridge  #8438c7;
   transition: .9s;
    box-shadow: 0px 0px 10px rgba(0,0,0,1);
 }
@@ -335,7 +337,7 @@ img#caixa{
   background-color: #d4d4dc;
   border-radius: 30px;
   text-align: center;
-  border: 15px solid #49657b; 
+  border: 15px solid #2ca8fe;
    box-shadow: 0px 0px 10px rgba(0,0,0,1);
 }
 
@@ -365,7 +367,7 @@ img#caixa{
   position:relative;
 }
 .buttonprod:hover{
-   border: 10px solid #49657b; 
+   border: 10px solid #8438c7;
   
   transition: .6s;
 }
@@ -402,7 +404,7 @@ img#caixa{
 /*---footer ---*/
 .footer{
   text-align: center;
-  background-color:  #63ace5;
+  background-color:  #22cffd;
   font-size: 16px;
   padding: 2em;
 
@@ -419,7 +421,7 @@ img#caixa{
 .social {
   padding: 10px;
   display: inline-flex;
-   border: 12px solid  #63ace5;
+   border: 12px solid  #2baafd;
    border-radius: 60px;
   align-items: center;
   justify-content: center;

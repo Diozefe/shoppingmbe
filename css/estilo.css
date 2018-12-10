@@ -12,9 +12,32 @@ html * {
 }
 
 body {
-  background-color: #4b86b4;
+  background-image: linear-gradient(180deg, rgb(68, 72, 255) 0%, rgb(33, 212, 253) 100%);
   font-family: "Audiowide";
   font-size: 100%;
+}
+body::-webkit-scrollbar{
+  transition: 3s;
+  position: absolute;
+  opacity: .1;
+  width: 10px;
+  background: rgba(14, 106, 199, 0.51);
+}
+body::-webkit-scrollbar:hover{
+  transition: 3s;
+  opacity: 1;
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+  transition: 2s;
+  opacity: .3;
+  border-radius: 10px;
+  background: rgba(132, 56, 199, 0.36);
+}
+body::-webkit-scrollbar-thumb:hover{
+  transition: 2s;
+  opacity: 1;
+  background: #8438c7;
 }
 
 header {
@@ -22,7 +45,8 @@ header {
  text-align: center;
  padding-top: 20px;
  padding-bottom: 80px;
- background-color: #63ace5;
+
+ background: none;
  width: 100%;
  height: auto;
  box-shadow: 0px 0px 10px rgba(0,0,0,1);
@@ -32,7 +56,7 @@ header {
 /*botão log|cad*/
 
 .button {
-
+  transition: .8s;
   position:relative;
   display:inline-block;
   margin: -6px;
@@ -40,17 +64,18 @@ header {
   
   font-size: 14px;
   font-weight: bold;
-  background-color: #d4d4dc;
-  margin-left: 91%;
+  background-color: rgb(132, 56, 199);
+  margin-left: 90%;
 
-  border: 10px solid  #63ace5;
+  border: 10px solid  rgb(132, 56, 199);
   box-shadow: 0px 0px 10px rgba(0,0,0,1);
   border-radius: 60px;
   padding: 15px 15px;
   cursor: pointer;
 }
 .button a{
-  color: #1d1e22;
+  transition: .8s;
+  color: #fff;
   font-weight:bold;
   font-size:14px;
   text-align: center;
@@ -59,8 +84,8 @@ header {
   position:relative;
 }
 .button:hover{
-  background-color: #63ace5;
-  transition: .6s;
+  transition: .8s;
+  background-color: #424fff;
 }
 /*----fim botão log/cad---*/
 
@@ -78,12 +103,12 @@ header {
   border-radius: 30px;
 }
 .skew-menu ul li {
-  background-color: #d4d4dc;
+  background-color: #8438c7;
   float: left;
   border-right: 1px solid #eee;
   box-shadow: 0px 0px 10px rgba(0,0,0,1);
   text-transform: uppercase;
-  color: #555;
+  color: #FFFFFF;
   font-weight: bolder;
   transition: all 0.2s linear;
 }
@@ -95,8 +120,8 @@ header {
   border-radius: 0 20px 20px 0;
 }
 .skew-menu ul li:hover {
-  background-color:  #aaaaaa;
-  color: #fff;
+  background-color:  #FFFFFF;
+  color: #8438c7;
 }
 .skew-menu ul li a {
   font-size: 13px;
@@ -131,13 +156,13 @@ img#caixa{
 
 .Interface {  
   justify-content: center;
-  background-color: #d4d4dc;
+  background-color: #FFFFFF;
   color: #fff;
   max-width: 93%;
   margin: 5% auto;
   padding: 4%;
-  border-radius: 60px;
-  border: 20px solid #4b86b4;
+  border-radius: 30px;
+  border: 20px solid #5fc7ea;
   box-shadow: 0px 0px 10px rgba(0,0,0,1);
 }
 
@@ -196,7 +221,7 @@ img#caixa{
 /* Footer */
 .footer{
   text-align: center;
-  background-color: #63ace5;
+  background-color: #23cafd;
   font-size: 16px;
   padding: 2em;
 
@@ -205,20 +230,21 @@ img#caixa{
 
   margin-top: 1%;
   text-align: center;
-  color: #d4d4dc;
+  color: #fff;
   
 }
 
 /*social botões*/
 .social {
-  padding: 10px;
+  padding: 12px;
   display: inline-flex;
-   border: 12px solid #63ace5;
+   border: 12px solid  #5fc7ea;
    border-radius: 60px;
   align-items: center;
   justify-content: center;
   background-color: #d4d4dc;
    box-shadow: 0px 0px 10px rgba(0,0,0,1);
+    margin-bottom: 20px;
 }
 .social i {
   padding: 0px 10px;
