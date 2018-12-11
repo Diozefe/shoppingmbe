@@ -16,36 +16,22 @@ body {
   font-family: "Audiowide";
   font-size: 100%;
 }
+/*
 body::-webkit-scrollbar{
-  transition: 3s;
   position: absolute;
-  opacity: .1;
   width: 10px;
   background: rgba(14, 106, 199, 0.51);
 }
-body::-webkit-scrollbar:hover{
-  transition: 3s;
-  opacity: 1;
-  width: 10px;
-}
 body::-webkit-scrollbar-thumb{
-  transition: 2s;
-  opacity: .3;
   border-radius: 10px;
-  background: rgba(132, 56, 199, 0.36);
-}
-body::-webkit-scrollbar-thumb:hover{
-  transition: 2s;
-  opacity: 1;
   background: #8438c7;
-}
+}*/
 
 header {
  position: relative;
  text-align: center;
  padding-top: 20px;
  padding-bottom: 80px;
-
  background: none;
  width: 100%;
  height: auto;
@@ -57,16 +43,13 @@ header {
 
 .button {
   transition: .8s;
-  position:relative;
-  display:inline-block;
-  margin: -6px;
+  position: relative;
+  display: inline-block;
   z-index: 3;
-  
   font-size: 14px;
   font-weight: bold;
   background-color: rgb(132, 56, 199);
-  margin-left: 90%;
-
+  margin: -6px -6px -6px 90%;
   border: 10px solid  rgb(132, 56, 199);
   box-shadow: 0px 0px 10px rgba(0,0,0,1);
   border-radius: 60px;

@@ -9,6 +9,18 @@ include("conexao.php");
 	<meta charset="utf-8">
 	<title>Projeto Login</title>
 	<link rel="stylesheet" href="css/cad.css">
+    <style>
+        select{
+            background-color: #FFFFFF;
+            border: 8px solid #D6D9DC;
+            box-shadow: 0px 0px 10px rgba(0,0,0,1);
+            border-radius: 3px;
+            width: 100%;
+            padding: 7px;
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
 	<header class='speaker-form-header'>
@@ -24,41 +36,55 @@ include("conexao.php");
     <div class="circle-2"></div>
     <div class="circle-3"></div>
     <div class="inner-part">
-      <div class="gif-part">  <form class="speaker-form" method="POST" action="processa.php">
+      <div class="gif-part">
+      <form class="speaker-form" method="POST" action="processa.php">
          <div class="form-row">
-             <div class="form-row div-ajust div-esq">
-             <label for='full-name'>Nome Completo</label>
-             <input type="text"  name="nome"placeholder="Digite o seu nome completo! ">
+            <div class="form-row div-esq">
+                <div class="form-row div-ajust div-esq">
+                    <label for='nome'>Primeiro Nome</label>
+                    <input id="nome" type="text" required name="nome"placeholder="Primeiro Nome">
+                </div>
+                <div class="form-row div-ajust div-dir">
+                     <label for="snome">Ultimo Nome</label>
+                    <input id="snome" type="text" required name="snome"placeholder="Ultimo Nome">
+                </div>
             </div>
             <div class="form-row div-ajust div-dir">
              <label for='email'>E-mail</label>
-             <input type="email"  name="email" placeholder="Digite o seu e-mail!">
+             <input type="email" required name="email" placeholder="Digite o seu e-mail!">
             </div>
          </div>
 	<div class="form-row">
         <div class="form-row div-ajust div-esq">
             <label for='usuario'>Usuário</label>
-            <input id="usuario" type="usuario" name="usuario" placeholder="Digite seu usuario!">
+            <input id="usuario" required type="text" name="usuario" placeholder="Digite seu usuario!">
             </div>
         <div class="form-row div-ajust div-dir">
-            <label for='full-phone'>Telefone</label>
-            <input type="text"  name="telefone" placeholder="Telefone">
+            <label for="fone">Telefone</label>
+            <input id="fone" type="text" required name="telefone" placeholder="Telefone">
             </div>
 	</div>
     <div class="form-row">
-	    <div class="form-row div-esq div-ajust">
-	        <label for='date'>Data nascimento</label>
-	        <input id="date" type="date" name="datanascimento">
-	    </div>
+        <div class="form-row div-ajust div-esq">
+            <label for='data'>Data</label>
+            <input id="data" required type="date" name="data">
+        </div>
+        <div class="form-row div-ajust div-dir">
+            <label for='sexo'>Sexo</label>
+            <select required class="sexo" name="sexo">
+                <option value="1">Feminino</option>
+                <option value="2">Masculino</option>
+            </select>
+        </div>
     </div>
 	<div class="form-row">
         <div class="form-row div-ajust div-esq">
             <label for='senha'>Senha</label>
-            <input type="password" name="senha" placeholder="Digite sua senha!">
+            <input required type="password" name="senha" placeholder="Digite sua senha!">
         </div>
         <div class="form-row div-ajust div-dir">
             <label for='csenha'>Confirme</label>
-            <input type="password" name="csenha" placeholder="Confirmar senha!">
+            <input id="csenha" required type="password" name="csenha" placeholder="Confirmar senha!">
         </div>
 	</div>
 

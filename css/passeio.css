@@ -38,7 +38,7 @@ p{
     background-color: white;
     margin: 50px auto;
     width: 94%;
-    height: 500px;
+    height: 550px;
     overflow: hidden;
     border: 20px solid #8438c7;
     position: relative;
@@ -51,7 +51,8 @@ p{
     animation: round 16s infinite;
     opacity: 0;
     width: 100%;
-    height: auto;
+    height: 550px;
+    background-size: cover;
   }
   
 @keyframes round {
@@ -292,13 +293,10 @@ img#caixa{
   background-size: 16px 16px;
   color: #555;
   max-width: 92.6%;
-  margin: 5.5% auto;
-  margin-top: 2%;
-  padding: 4%;
+  margin: 2% auto 5.5%;
   border-radius: 60px;
-  padding-top: 1%;
-  padding-bottom: 1%;
-   border: 20px solid #22cffd;
+  padding: 1% 4%;
+  border: 20px solid #22cffd;
   box-shadow: 0px 0px 10px rgba(0,0,0,1);
 
 }
@@ -315,7 +313,7 @@ img#caixa{
 
 .item img {
   display: block;
-   width: 340px;
+
   height: 380px;
   background-color:  #d4d4dc;
   border-radius: 20px;
@@ -325,7 +323,7 @@ img#caixa{
 .item img:hover{
   background-color:  #8438c7;
   border: 10px ridge  #8438c7;
-  transition: .9s;
+  transition: 0.5s;
    box-shadow: 0px 0px 10px rgba(0,0,0,1);
 }
 
