@@ -6,8 +6,10 @@ include("conexao.php");
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<meta charset="utf-8">
-	<title>Projeto Login</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon 2x" type="image/x-png" href="../img/loja.png">
+    <title>Mybazz Easy</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 	<link rel="stylesheet" href="css/cad.css">
     <style>
         select{
@@ -23,6 +25,9 @@ include("conexao.php");
     </style>
 </head>
 <body>
+<div class="buttonback" title="Voltar">
+	<a href="index.html"><i class="fas fa-2x fa-sign-out-alt"></i></a>
+</div>
 	<header class='speaker-form-header'>
       <h1>Cadastro</h1>
       <p><em>Preencha seus dados e comece a passear conosco.

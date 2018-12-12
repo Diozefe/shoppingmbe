@@ -9,8 +9,10 @@ session_start();
 
 <head>
   <meta charset="UTF-8">
+  <link rel="shortcut icon 2x" type="image/x-png" href="../img/loja.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login MyBazz</title>
+  <title>MyBazz Easy</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
   
   
   
@@ -20,6 +22,9 @@ session_start();
 </head>
 
 <body>
+<div class="buttonback" title="Voltar">
+	<a href="index.html"><i class="fas fa-2x fa-sign-out-alt"></i></a>
+</div>
   <header class='speaker-form-header'>
       <h1>Login</h1>
       <p><em>Bem-Vindo de volta!</em></p>

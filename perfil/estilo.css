@@ -7,7 +7,7 @@
 body {
 
 	color: #fff;
-    background:  #4b86b4;
+  background-color: #717d89;
   
     font-family: "Audiowide";
   font-size: 100%;
@@ -58,6 +58,7 @@ body {
 
 /*imagens*/
 .article-image {
+  background-color: #B2D6FF;
   box-shadow: 0px 0px 10px rgba(0,0,0,1);
   border: 15px outset #fff;
   border-radius: 50%;
@@ -78,6 +79,40 @@ body {
   border: 5px solid #fff;
 }
 
+.dados{
+  position: relative;
+  border: 10px solid  #d4d4dc;
+   box-shadow: 0px 0px 10px rgba(0,0,0,1);
+   border-radius: 30px;
+  background-color: #F5CF8E;
+  width: 85%;
+  height: auto;
+  margin: 15px auto;
+}
+.dados h4{
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  text-align: center;
+  width: 30%;
+  margin: 20px;
+  background-color:  #F5CF8E;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.dados p{
+  text-align: center;
+  color: #555;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  margin: 10px auto;
+   width:60%;
+   height: auto; 
+   padding: 10px; 
+   font-size: 15px;
+}
+
 /*colunas*/
 .content {
 	border: 20px solid  #4b86b4;
@@ -86,7 +121,7 @@ body {
 	padding: 20px;
 	float: left;
   width: 640px;                 /* Add this */
-  height: 930px;
+  height: 1058px;
   background-color: #d4d4dc;
 }
 .content h1{
@@ -110,15 +145,15 @@ body {
 	padding: 20px;
 	float: right;
   width: 640px;                 /* Add this */
-  height: 930px;
+  height: 1058px;
   background-color: #F5CF8E;
   margin-bottom: 30px;
 }
 .columnpub {
-  display: table;
+  display: block;
  text-align: justify;
   width: 100%;
-  margin: 8px 0px;
+  margin: 20px 0px;
   height: auto;
   background-color: #B2D6FF;    /* Medium blue */
   border-radius:30px;
@@ -129,12 +164,12 @@ body {
 
 .username {
   float: left;
-  
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
   background-color: #fff;
   border-radius: 30px;
   font-size: 18px;
   color: #555;
- margin: 10px;
+ margin: 15px;
  padding: 5px;
 }
 
@@ -154,19 +189,8 @@ body {
 }
 
 /*--P--*/
-p {
-  border-radius: 30px;
-  margin: 20px;
-  padding: 20px;
-  width: 85%;
-  margin-bottom: 20px;
-  background-color: #F5CF8E;
-  border: 10px solid #d4d4dc;
-  box-shadow: 0px 0px 10px rgba(0,0,0,1);
-  margin-left: 8%;
-  margin-right: 0%; 
 
-}
+
 #block1{
   margin-top: 15px;
   color: #555;
@@ -283,7 +307,7 @@ p {
   justify-content: center;
   background-color: #F5CF8E;
   box-shadow: 0px 0px 10px rgba(0,0,0,1);
-  margin: 12px 8%;
+  margin: 6px 7.5%;
 }
 .social i {
   padding: 0px 10px;
