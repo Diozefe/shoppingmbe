@@ -23,7 +23,7 @@ session_start();
 
 <body>
 <div class="buttonback" title="Voltar">
-	<a href="index.html"><i class="fas fa-2x fa-sign-out-alt"></i></a>
+	<a href="../index.html"><i class="fas fa-2x fa-sign-out-alt"></i></a>
 </div>
   <header class='speaker-form-header'>
       <h1>Login</h1>

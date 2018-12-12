@@ -291,18 +291,16 @@ strong{
 
 .buttonback {
   transition: .5s;
-  position: absolute;
-  display: inline-block;
-  z-index: 3;
+  position: fixed;
   font-size: 14px;
   font-weight: bold;
   background-color: #8438c7;
-  margin: 13px;
-  margin-right: 91%;
+  margin: 10px -5%;
+  right: 80px;
   border: 10px solid  #8438c7;
   box-shadow: 0px 0px 10px rgba(0,0,0,1);
   border-radius: 60px;
-  padding: 15px 15px;
+  padding: 10px 10px;
   cursor: pointer;
 }
 .buttonback a{
@@ -317,7 +315,7 @@ strong{
 }
 .buttonback:hover{
   transition: .8s;
-  background-color: #424fff;
+  background-color: #d4d4d4;
 }
 
 .article-image {
