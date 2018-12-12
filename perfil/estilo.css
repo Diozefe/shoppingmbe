@@ -290,7 +290,7 @@ body {
   width: 350px;
   height: 300px;
   border-radius: 30px;
-   background: var(--primary); 
+   background: #d4d4dc;
 }
 .buttonprod{
   top: 8px;
